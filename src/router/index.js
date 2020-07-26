@@ -22,6 +22,7 @@ let router = new Router({
     }
   ]
 })
+
 // 路由守卫
 // router.beforeEach((to, from, next) => {
 //   debugger
