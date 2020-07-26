@@ -1,0 +1,158 @@
+html {
+  color: #333;
+  background: #fff;
+  font-family: "poppins", Arial, Microsoft YaHei, sans-serif, Arial, "宋体";
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+strong {
+  padding: 0;
+  margin: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+caption,
+em,
+strong,
+i {
+  font-style: inherit;
+  font-weight: inherit;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: "";
+}
+input,
+button,
+textarea,
+select,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+.clear {
+  clear: both;
+  height: 0px;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: "...";
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  border-radius: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+a,
+div,
+span,
+p,
+li {
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* common */
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: top;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #fff;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+// element-ui 覆盖样式
+.el-drawer__header > :first-child {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(42, 45, 60, 1);
+  line-height: 25px;
+}
+
+html,body,#app{
+  height: 100%;
+}
