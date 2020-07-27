@@ -1,0 +1,60 @@
+.demo {
+  h4 {
+    font-size: 24px;
+    padding-top: 100px;
+    text-align: center;
+    // padding: 20px 0;
+  }
+  h5 {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .test-box {
+    display: flex;
+    padding-top: 50px;
+    text-align: center;
+    padding: 0 20px 0;
+    justify-content: center;
+    .test-item {
+      flex: 1;
+      .el-input {
+        width: auto;
+      }
+      .status-box {
+        padding: 20px 0;
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .test-box2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px 20px;
+    justify-content: center;
+    .test-item {
+      flex: 1;
+      .el-input {
+        width: auto;
+      }
+      .status-box {
+        padding: 20px 0;
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .test-box3 {
+    text-align: center;
+    padding: 20px 20px 20px;
+    /deep/ .el-button {
+      width: auto;
+    }
+    .test-item {
+      padding: 10px 0;
+    }
+  }
+}

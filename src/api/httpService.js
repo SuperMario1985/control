@@ -1,5 +1,5 @@
 import axios from "axios";
-let host = 'http://39.105.94.5:8092';
+let host = 'http://127.0.0.1:8080';
 let httpServe = axios.create();
 function nowWeather(returnFun) {
     let resultInfo = {
@@ -75,7 +75,7 @@ function test1() {
         url: "/dataProcess/GetRealTimeData"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
-        alert(msg);
+
     });
 }
 function test2() {
@@ -86,10 +86,10 @@ function test2() {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=M0.0&value=1"
+        url: host + "/dataProcess/WriteData?tag=M0.0&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
-        alert(msg);
+
     });
 }
 function test3() {
@@ -103,7 +103,7 @@ function test3() {
         url: "/dataProcess/GetHistoryData?startDate=2020-07-14&endDate=2020-07-15&interval=2"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
-        alert(msg);
+
     });
 }
 function viewOpen(retureFun) {
@@ -114,16 +114,16 @@ function viewOpen(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.0&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1001.0&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
-        alert(msg);
+
         if (retureFun) {
             retureFun(response);
         }
     }).catch(function (res) {
         let msg = JSON.stringify(res);
-        alert(msg);
+
         if (retureFun) {
             retureFun(res);
         }
@@ -137,16 +137,16 @@ function viewClose(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.0&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1001.0&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
-        alert(msg);
+
         if (retureFun) {
             retureFun(response);
         }
     }).catch(function (res) {
         let msg = JSON.stringify(res);
-        alert(msg);
+
         if (retureFun) {
             retureFun(res);
         }
@@ -160,19 +160,19 @@ function rainfallOpen(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.1&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1001.1&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function rainfallClose(retureFun) {
@@ -183,19 +183,19 @@ function rainfallClose(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.1&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1001.1&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function siphonOpen(retureFun) {
@@ -206,19 +206,19 @@ function siphonOpen(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.2&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1001.2&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function siphonClose(retureFun) {
@@ -229,19 +229,19 @@ function siphonClose(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.2&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1001.2&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function sameFloorDrainageOpen(retureFun) {
@@ -252,19 +252,19 @@ function sameFloorDrainageOpen(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.3&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1001.3&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function sameFloorDrainageClose(retureFun) {
@@ -275,19 +275,19 @@ function sameFloorDrainageClose(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.3&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1001.3&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterloggingControlOpen(retureFun) {
@@ -298,19 +298,19 @@ function waterloggingControlOpen(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.4&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1001.4&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterloggingControlClose(retureFun) {
@@ -321,19 +321,19 @@ function waterloggingControlClose(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1001.4&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1001.4&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterTank1Open(retureFun) {
@@ -344,19 +344,19 @@ function waterTank1Open(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1000.0&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1000.0&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterTank1Close(retureFun) {
@@ -367,19 +367,19 @@ function waterTank1Close(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1000.0&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1000.0&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterTank2Open(retureFun) {
@@ -390,19 +390,19 @@ function waterTank2Open(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1000.1&value=1"
+        url: host + "/dataProcess/WriteData?tag=V1000.1&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
 function waterTank2Close(retureFun) {
@@ -413,21 +413,214 @@ function waterTank2Close(retureFun) {
     }
     httpServe({
         method: "get",
-        url: "/dataProcess/WriteData?tag=V1000.1&value=0"
+        url: host + "/dataProcess/WriteData?tag=V1000.1&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
             retureFun(response);
         }
-        alert(msg);
+
     }).catch(function (res) {
         let msg = JSON.stringify(res);
         if (retureFun) {
             retureFun(res);
         }
-        alert(msg);
+
     })
 }
+// 读取数据
+function checkIsVidwOpened(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/GetRealTimeData"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsVidwClosed(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsRainfallOpened(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsRainfallClosed(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsSiphonOpened(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsSiphonClosed(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsSameFloorDrainageOpened(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsSameFloorDrainageClosed(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsWaterloggingControlOpened(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+function checkIsWaterloggingControlClosed(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/ReadData?tag=V1005.1"
+    }).then(function (response) {
+        if (retureFun) {
+            retureFun(response);
+        }
+    }).catch(function (res) {
+        if (retureFun) {
+            retureFun(res);
+        }
+    })
+}
+
+let test = { "VW1066": "0", "VW1068": "0", "VD1008": "-150", "VD1028": "-3.71", "V1000.0": "0", "V1000.1": "0", "V1001.0": "0", "V1001.1": "0", "V1001.2": "0", "V1004.0": "0", "V1001.3": "0", "V1004.1": "0", "V1001.4": "0", "V1005.1": "1", "V1006.0": "0", "V1005.2": "0", "V1006.1": "0", "V1005.3": "0", "V1006.2": "0", "VW1070": "0", "VD1024": "-150", "VW1072": "0", "VW1074": "0", "VW1032": "35", "VW1034": "0", "VW1036": "80", "VD1016": "-6.25", "VW1038": "12", "V1005.4": "0", "V1005.5": "0", "V1005.6": "0", "V1005.7": "0", "VD1012": "-150", "VW1060": "0", "VW1062": "0", "VW1040": "0", "VW1064": "0", "VW1042": "23" }
 
 export default {
     test1,
@@ -449,5 +642,6 @@ export default {
     waterTank1Open,
     waterTank1Close,
     waterTank2Open,
-    waterTank2Close
+    waterTank2Close,
+    checkIsVidwOpened
 }
