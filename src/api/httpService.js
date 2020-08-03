@@ -448,7 +448,8 @@ function checkIsVidwOpened(retureFun) {
         }
     })
 }
-function checkIsVidwClosed(retureFun) {
+// 配置
+function configData(configInfo, retureFun) {
     let resultInfo = {
         success: false,
         data: null,
@@ -456,164 +457,20 @@ function checkIsVidwClosed(retureFun) {
     }
     httpServe({
         method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
+        url: host + "/dataProcess/WriteData",
+        params: {
+            tag: configInfo.tag,
+            value: configInfo.value
+        }
     }).then(function (response) {
+        let msg = JSON.stringify(msg);
+
         if (retureFun) {
             retureFun(response);
         }
     }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsRainfallOpened(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsRainfallClosed(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsSiphonOpened(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsSiphonClosed(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsSameFloorDrainageOpened(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsSameFloorDrainageClosed(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsWaterloggingControlOpened(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
-        if (retureFun) {
-            retureFun(res);
-        }
-    })
-}
-function checkIsWaterloggingControlClosed(retureFun) {
-    let resultInfo = {
-        success: false,
-        data: null,
-        msg: ''
-    }
-    httpServe({
-        method: "get",
-        url: host + "/dataProcess/ReadData?tag=V1005.1"
-    }).then(function (response) {
-        if (retureFun) {
-            retureFun(response);
-        }
-    }).catch(function (res) {
+        let msg = JSON.stringify(res);
+
         if (retureFun) {
             retureFun(res);
         }
@@ -643,5 +500,6 @@ export default {
     waterTank1Close,
     waterTank2Open,
     waterTank2Close,
-    checkIsVidwOpened
+    checkIsVidwOpened,
+    configData
 }

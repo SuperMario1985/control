@@ -14,10 +14,10 @@ Vue.use(ElementUI);
 import VCharts from 'v-charts';
 Vue.use(VCharts);
 
-import VideoPlayer from 'vue-video-player'
-require('video.js/dist/video-js.css')
-require('vue-video-player/src/custom-theme.css')
-Vue.use(VideoPlayer)
+// import VideoPlayer from 'vue-video-player'
+// require('video.js/dist/video-js.css')
+// require('vue-video-player/src/custom-theme.css')
+// Vue.use(VideoPlayer)
 
 Vue.config.productionTip = false
 

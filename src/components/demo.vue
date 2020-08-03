@@ -213,19 +213,39 @@
         ></el-switch>
       </div>
     </div>
-    <!-- <h4>配置参数调试</h4>
+    <h4>配置参数调试</h4>
     <div class="test-box3">
-      <el-button @click="drawer = true" type="primary">配置参数</el-button>
-    </div>-->
-    <el-drawer
-      title="配置参数"
-      size="400px"
-      :visible.sync="drawer"
-      direction="rtl"
-      :before-close="handleClose"
-    >
-      <span>我来啦!</span>
-    </el-drawer>
+      <div class="drawer">
+        <div>
+          <span>潜水泵1频率设定:</span>
+          <strong @click="config('VW1032',configInfo.waterTank1F)">{{configInfo.waterTank1F}}</strong>
+        </div>
+        <div>
+          <span>潜水泵2频率设定:</span>
+          <strong @click="config('VW1034',configInfo.waterTank2F)">{{configInfo.waterTank2F}}</strong>
+        </div>
+        <div>
+          <span>性能试验台目标流量:</span>
+          <strong @click="config('VW1042',configInfo.waterPipe1Flow)">{{configInfo.waterPipe1Flow}}</strong>
+        </div>
+        <div>
+          <span>地下室出水管路目标压力:</span>
+          <strong
+            @click="config('VW1038',configInfo.waterPipe2Pressure)"
+          >{{configInfo.waterPipe2Pressure}}</strong>
+        </div>
+        <div>
+          <span>地下室出水管路目标流量:</span>
+          <strong @click="config('VW1040',configInfo.waterPipe2Flow)">{{configInfo.waterPipe2Flow}}</strong>
+        </div>
+        <div>
+          <span>调节阀开度:</span>
+          <strong
+            @click="config('VW1036',configInfo.regulatingValve)"
+          >{{configInfo.regulatingValve}}</strong>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -264,7 +284,14 @@ export default {
         waterPipe2Pressure: "",
         waterPipe2Flow: "",
       },
-      drawer: false,
+      configInfo: {
+        waterTank1F: "",
+        waterTank2F: "",
+        waterPipe1Flow: "",
+        waterPipe2Pressure: "",
+        waterPipe2Flow: "",
+        regulatingValve: "",
+      },
       test: "",
     };
   },
@@ -277,42 +304,6 @@ export default {
       let that = this;
       this.isLoading = true;
       httpService.viewClose(function (response) {});
-    },
-    rainfallOpen() {
-      httpService.rainfallOpen(function (response) {});
-    },
-    rainfallClose() {
-      httpService.rainfallClose(function (response) {});
-    },
-    siphonOpen() {
-      httpService.siphonOpen(function (response) {});
-    },
-    siphonClose() {
-      httpService.siphonClose(function (response) {});
-    },
-    sameFloorDrainageOpen() {
-      httpService.sameFloorDrainageOpen(function (response) {});
-    },
-    sameFloorDrainageClose() {
-      httpService.sameFloorDrainageClose(function (response) {});
-    },
-    waterloggingControlOpen() {
-      httpService.waterloggingControlOpen(function (response) {});
-    },
-    waterloggingControlClose() {
-      httpService.waterloggingControlClose(function (response) {});
-    },
-    waterTank1Open() {
-      httpService.waterTank1Open(function (response) {});
-    },
-    waterTank1Close() {
-      httpService.waterTank1Close(function (response) {});
-    },
-    waterTank2Open() {
-      httpService.waterTank2Open(function (response) {});
-    },
-    waterTank2Close() {
-      httpService.waterTank2Close(function (response) {});
     },
     checkIsVidwOpened() {
       let that = this;
@@ -370,15 +361,71 @@ export default {
             Number(response.data["VD1028"]).toFixed(2) + "KPa";
           that.swtchInfo.waterPipe2Flow =
             Number(response.data["VD1024"]).toFixed(2) + "M3/H";
+
+          // 配置项
+          that.configInfo.waterTank1F = Number(response.data["VW1032"]).toFixed(
+            1
+          );
+          that.configInfo.waterTank2F = Number(response.data["VW1034"]).toFixed(
+            1
+          );
+          that.configInfo.waterPipe1Flow = Number(
+            response.data["VW1042"]
+          ).toFixed(1);
+          that.configInfo.waterPipe2Pressure = Number(
+            response.data["VW1038"]
+          ).toFixed(1);
+          that.configInfo.waterPipe2Flow = Number(
+            response.data["VW1040"]
+          ).toFixed(1);
+          that.configInfo.regulatingValve = Number(
+            response.data["VW1036"]
+          ).toFixed(1);
+
+          //   waterTank1F: "",
+          // waterTank2F: "",
+          // waterPipe1Flow: "",
+          // waterPipe2Pressure: "",
+          // waterPipe2Flow: "",
         }
       });
     },
+    goConfig() {},
     handleClose(done) {
-      this.$confirm("确认关闭？")
-        .then((_) => {
-          done();
+      done();
+      // this.$confirm("确认关闭？")
+      //   .then((_) => {
+      //     done();
+      //   })
+      //   .catch((_) => {});
+    },
+    config(tag, num) {
+      let temp = tag;
+      this.$prompt("请输入要设定的值", "配置面板", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+      })
+        .then(({ value }) => {
+          if (value) {
+            let configInfo = {
+              tag: temp,
+              value: Number(value).toFixed(1),
+            };
+            httpService.configData(configInfo, function (response) {
+            });
+          } else {
+            this.$message({
+              type: "warn",
+              message: "请输入要设定的值",
+            });
+          }
         })
-        .catch((_) => {});
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "取消设置",
+          });
+        });
     },
   },
   computed: {},
