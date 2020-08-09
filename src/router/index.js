@@ -15,6 +15,10 @@ let router = new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },{
+      path: '/demo',
+      name: 'Demo',
+      component: Demo
     },
     {
       path: '*',

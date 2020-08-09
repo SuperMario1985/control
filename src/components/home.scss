@@ -5,6 +5,70 @@
     height: 100%;
     max-height: 1080px;
     margin: 0 auto;
+    .step {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(4, 204, 165, 1) 0%, rgba(0, 191, 222, 1) 100%);
+        .left-side {
+            width: 1031px;
+            height: 100%;
+            background: url("../assets/images/screen-saver/bg.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .right-side {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            .log {
+                padding-top: 104px;
+                text-align: right;
+                padding-right: 60px;
+                img {
+                    width: 262px;
+                    height: auto;
+                }
+            }
+            .img-box {
+                padding-top: 200px;
+                text-align: right;
+                img {
+                    width: 834px;
+                    height: auto;
+                }
+            }
+            .active-box {
+                padding-top: 45px;
+                text-align: right;
+                padding-right: 60px;
+                font-size: 24px;
+                font-family: Microsoft YaHei;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 1);
+                line-height: 45px;
+                i {
+                    display: inline-block;
+                    width: 28px;
+                    height: 38px;
+                    background: url("../assets/images/screen-saver/icon-hand.png") center center no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 10px;
+                }
+            }
+            .compony-name {
+                position: absolute;
+                right: 60px;
+                bottom: 79px;
+                z-index: 10;
+                font-size: 36px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 1);
+                line-height: 45px;
+            }
+        }
+    }
     .step0 {
         position: relative;
         display: flex;
@@ -56,6 +120,643 @@
                     }
                     &.index4 {
                         padding-left: 273px;
+                    }
+                }
+            }
+        }
+    }
+    .step1 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .left-side {
+            width: 370px;
+            height: 100%;
+            background: url("../assets/images/step1/bg-left.png") 28px 29px no-repeat;
+            background-size: 135px 142px;
+            .title-box {
+                position: relative;
+                // width: 135px;
+                margin: 70px 0 0 60px;
+                padding-left: 28px;
+                .p1 {
+                    font-size: 26px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 28px;
+                }
+                .p2 {
+                    width: 66px;
+                    font-size: 40px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    padding-left: 28px;
+                }
+                .p3 {
+                    position: absolute;
+                    left: 60px;
+                    top: 32px;
+                    z-index: 10;
+                    height: 237px;
+                    font-size: 20px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 45px;
+                    transform: rotate(90deg);
+                    transform-origin: left top;
+                }
+            }
+            .acction-box {
+                margin-left: 100px;
+                text-align: center;
+                .flur {
+                    position: relative;
+                    img {
+                        width: 180px;
+                        height: auto;
+                    }
+                    span {
+                        font-size: 30px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 45px;
+                    }
+                    i {
+                        position: absolute;
+                        left: 0px;
+                        top: 58px;
+                        z-index: 10;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 34px;
+                        font-family: Adobe Heiti Std;
+                        font-weight: normal;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 5px;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 80px;
+                    line-height: 80px;
+                    text-align: center;
+                    background: url("../assets/images/step1/bg-btn.png") center center no-repeat;
+                    background-size: 100% 80px;
+                    font-size: 30px;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: rgba(209, 231, 255, 1);
+                    &.active {
+                        background: url("../assets/images/step1/bg-btn-active.png") center center no-repeat;
+                        background-size: 100% 80px;
+                        font-weight: bold;
+                        color: rgba(209, 231, 255, 1);
+                    }
+                    &.open {
+                        margin-top: 76px;
+                    }
+                    &.close {
+                        margin-top: 40px;
+                    }
+                }
+            }
+            .router {
+                position: absolute;
+                left: 100px;
+                bottom: 50px;
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    background: url("../assets/images/step1/icon-arror-back.png") center center no-repeat;
+                    background-size: 28px 26px;
+                    margin-right: 14px;
+                }
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+            }
+        }
+        .right-side {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            padding-left: 46px;
+            padding-top: 27px;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 449px;
+                    margin-left: 48px;
+                    margin-top: 46px;
+                    &:nth-child(3n + 1) {
+                        margin-left: 0px;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .step1_1,
+    .step1_2,
+    .step1_3,
+    .step1_4,
+    .step1_5 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .left-side {
+            width: 418px;
+            height: 100%;
+            background: url("../assets/images/step1/bg-left.png") 28px 29px no-repeat;
+            background-size: 135px 142px;
+            .title-box {
+                position: relative;
+                margin: 70px 0 0 60px;
+                padding-left: 28px;
+                .p1 {
+                    font-size: 26px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 28px;
+                }
+                .p2 {
+                    width: 66px;
+                    font-size: 40px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    padding-left: 28px;
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        height: 36px;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                }
+                .p3 {
+                    position: absolute;
+                    left: 60px;
+                    top: 32px;
+                    z-index: 10;
+                    height: 237px;
+                    font-size: 20px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 45px;
+                    transform: rotate(90deg);
+                    transform-origin: left top;
+                }
+            }
+            .router {
+                position: absolute;
+                left: 100px;
+                bottom: 50px;
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    background: url("../assets/images/step1/icon-arror-back.png") center center no-repeat;
+                    background-size: 28px 26px;
+                    margin-right: 14px;
+                }
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+            }
+        }
+        .right-side {
+            flex: 1;
+            height: 100%;
+            padding-top: 77px;
+            margin-left: -166px;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 775px;
+                    margin-left: 67px;
+                    background: rgba(255, 255, 255, 1);
+                    border: 6px solid rgba(0, 193, 229, 1);
+                    box-shadow: 0px 1px 23px 1px rgba(198, 198, 198, 1);
+                    border-radius: 20px;
+                    &:nth-child(2n + 1) {
+                        margin-left: 0px;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    a {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        h5 {
+                            position: absolute;
+                            left: 0px;
+                            bottom: 0px;
+                            z-index: 10;
+                            width: 100%;
+                            height: 96px;
+                            line-height: 96px;
+                            text-align: center;
+                            background: rgba(0, 193, 229, 0.8);
+                            font-size: 40px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                    .info {
+                        display: flex;
+                        font-size: 30px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 74px;
+                        span {
+                            width: 166px;
+                            padding-left: 24px;
+                        }
+                        i {
+                            visibility: hidden;
+                        }
+                        strong {
+                            flex: 1;
+                            font-weight: bold;
+                        }
+                    }
+                    &.special {
+                        .info {
+                            span {
+                                width: 260px;
+                            }
+                        }
+                    }
+                }
+            }
+            .router {
+                position: absolute;
+                right: 100px;
+                bottom: 50px;
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+                a {
+                    margin: 0 10px;
+                }
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    margin-right: 14px;
+                    &.router-up {
+                        background: url("../assets/images/step1/icon-arror-left.png") center center no-repeat;
+                        background-size: 28px 26px;
+                    }
+                    &.router-down {
+                        background: url("../assets/images/step1/icon-arror-right.png") center center no-repeat;
+                        background-size: 28px 26px;
+                    }
+                }
+            }
+        }
+    }
+    .step2,
+    .step3,
+    .step4,
+    .step5 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .left-side {
+            width: 418px;
+            height: 100%;
+            background: url("../assets/images/step1/bg-left.png") 28px 29px no-repeat;
+            background-size: 135px 142px;
+            .title-box {
+                position: relative;
+                margin: 70px 0 0 60px;
+                padding-left: 28px;
+                .p1 {
+                    font-size: 26px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 28px;
+                }
+                .p2 {
+                    width: 66px;
+                    font-size: 40px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    padding-left: 28px;
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        height: 36px;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                }
+                .p3 {
+                    position: absolute;
+                    left: 60px;
+                    top: 32px;
+                    z-index: 10;
+                    height: 237px;
+                    font-size: 20px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 45px;
+                    transform: rotate(90deg);
+                    transform-origin: left top;
+                }
+            }
+            .router {
+                position: absolute;
+                left: 100px;
+                bottom: 50px;
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    background: url("../assets/images/step1/icon-arror-back.png") center center no-repeat;
+                    background-size: 28px 26px;
+                    margin-right: 14px;
+                }
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+            }
+        }
+        .right-side {
+            flex: 1;
+            height: 100%;
+            // padding-top: 77px;
+            // margin-left: -166px;
+            .right-content {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                .action-box {
+                    width: 371px;
+                    padding-top: 254px;
+                    text-align: center;
+                    & > p {
+                        padding-bottom: 20px;
+                        i {
+                            display: inline-block;
+                            width: 98px;
+                            padding-top: 110px;
+                            font-size: 34px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                            margin: 0 34px;
+                            cursor: pointer;
+                            &.start-button {
+                                background: url("../assets/images/common/icon-open.png") center 0px no-repeat;
+                                background-size: 98px 98px;
+                            }
+                            &.close-button {
+                                background: url("../assets/images/common/icon-close.png") center 0px no-repeat;
+                                background-size: 98px 98px;
+                            }
+                        }
+                    }
+                    .show-data {
+                        text-align: center;
+                        height: 105px;
+                        line-height: 105px;
+                        background: url("../assets/images/common/bg-circle.png") center center no-repeat;
+                        background-size: 100% 100%;
+                        font-size: 30px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        margin: 23px 0;
+                        span {
+                            padding: 0 6px;
+                        }
+                    }
+                }
+                .info-box {
+                    flex: 1;
+                    padding-top: 257px;
+                    h5 {
+                        font-size: 34px;
+                        font-family: Microsoft YaHei;
+                        font-weight: bold;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 35px;
+                        text-align: center;
+                        i {
+                            display: inline-block;
+                            width: 34px;
+                            height: 35px;
+                            background: url("../assets/images/common/icon-water.png") center center no-repeat;
+                            background-size: 28px 26px;
+                            margin-right: 20px;
+                        }
+                    }
+                    p {
+                        width: 696px;
+                        margin: 0 auto;
+                        padding-top: 100px;
+                        font-size: 24px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 72px;
+                        text-align: left;
+                    }
+                }
+            }
+            .router {
+                position: absolute;
+                right: 100px;
+                bottom: 50px;
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+                a {
+                    margin: 0 10px;
+                }
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    margin-right: 14px;
+                    &.router-up {
+                        background: url("../assets/images/step1/icon-arror-left.png") center center no-repeat;
+                        background-size: 28px 26px;
+                    }
+                    &.router-down {
+                        background: url("../assets/images/step1/icon-arror-right.png") center center no-repeat;
+                        background-size: 28px 26px;
+                    }
+                }
+            }
+        }
+    }
+    .step2 {
+        .right-side {
+            margin-left: -150px;
+            .right-content {
+                .action-box {
+                    width: 178px;
+                    padding-top: 300px;
+                    & > p {
+                        padding-bottom: 20px;
+                        i {
+                            &.start-button {
+                            }
+                            &.close-button {
+                                margin-top: 60px;
+                            }
+                        }
+                    }
+                }
+                .show-rain {
+                    flex: 1;
+                    display: flex;
+                    padding-top: 70px;
+                    padding-left: 100px;
+                    .show-rain-item {
+                        flex: 1;
+                        & > div {
+                            padding-top: 66px;
+                            img {
+                                width: 345px;
+                                height: auto;
+                                cursor: pointer;
+                            }
+                        }
+                        p {
+                            padding-top: 45px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .step3 {
+        .right-side {
+            .right-content {
+                .action-box {
+                    padding-top: 130px;
+                }
+                .info-box {
+                    padding-top: 150px;
+                    h5 {
+                        i {
+                            display: inline-block;
+                            width: 37px;
+                            height: 35px;
+                            background: url("../assets/images/common/icon-water3.png") center center no-repeat;
+                            background-size: 37px 35px;
+                            margin-right: 20px;
+                            vertical-align: middle;
+                        }
+                    }
+                    p {
+                        width: 847px;
+                    }
+                }
+            }
+        }
+    }
+    .step5 {
+        .left-side {
+            width: 360px;
+        }
+        .right-side {
+            margin-left: -150px;
+            .right-content {
+                .info-box {
+                    flex: 1;
+                    padding-top: 100px;
+                    h5 {
+                        i {
+                            display: inline-block;
+                            width: 51px;
+                            height: 36px;
+                            background: url("../assets/images/common/icon-water2.png") center center no-repeat;
+                            background-size: 51px 36px;
+                            margin-right: 20px;
+                        }
+                    }
+                    p {
+                        width: 1143px;
+                        margin: 0 auto;
+                        padding-top: 79px;
+                        font-size: 24px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 56px;
+                        text-align: left;
+                    }
+                }
+            }
+            .router {
+                position: absolute;
+                right: 100px;
+                bottom: 50px;
+                font-size: 30px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+                line-height: 45px;
+                a {
+                    margin: 0 10px;
+                }
+                i {
+                    width: 28px;
+                    height: 26px;
+                    display: inline-block;
+                    margin-right: 14px;
+                    &.router-up {
+                        background: url("../assets/images/step1/icon-arror-left.png") center center no-repeat;
+                        background-size: 28px 26px;
+                    }
+                    &.router-down {
+                        background: url("../assets/images/step1/icon-arror-right.png") center center no-repeat;
+                        background-size: 28px 26px;
                     }
                 }
             }
