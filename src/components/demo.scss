@@ -1,4 +1,255 @@
 .demo {
+  padding-top: 46px;
+  position: relative;
+  // display: flex;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/step6/bg.png") center center no-repeat;
+  h3 {
+    height: 46px;
+    background: url("../assets/images/step6/title.png") center center no-repeat;
+  }
+  .timer {
+    padding-top: 18px;
+    font-size: 30px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 253, 250, 1);
+    line-height: 45px;
+    text-align: center;
+  }
+  .main-content {
+    padding: 0 95px;
+    display: flex;
+    flex-wrap: wrap;
+    .part1,
+    .part2,
+    .part4 {
+      width: 50%;
+      h5 {
+        font-size: 36px;
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        color: rgba(187, 254, 255, 1);
+        line-height: 45px;
+        text-align: left;
+        padding: 20px 0 10px;
+        &.special {
+          margin-top: 20px;
+        }
+        & > i {
+          display: inline-block;
+          width: 7px;
+          height: 37px;
+          background: #00fffc;
+          margin-right: 8px;
+        }
+        strong {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 24px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: rgba(0, 253, 250, 1);
+          line-height: 45px;
+          margin-left: 30px;
+          i {
+            display: inline-block;
+            width: 182px;
+            height: 46px;
+            border: 1px solid rgba(0, 255, 252, 1);
+            border-radius: 4px;
+            line-height: 45px;
+            margin-right: 20px;
+            vertical-align: bottom;
+            font-size: 24px;
+            padding: 0 8px;
+            color: #fff;
+          }
+          span {
+            display: inline-block;
+            font-size: 24px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(1, 211, 213, 1);
+            line-height: 45px;
+          }
+        }
+      }
+      .part-item {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        & > div {
+          width: 50%;
+          padding-top: 10px;
+          p {
+            font-size: 24px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(1, 211, 213, 1);
+            line-height: 45px;
+          }
+          strong {
+            display: inline-block;
+            i {
+              display: inline-block;
+              width: 182px;
+              height: 46px;
+              border: 1px solid rgba(0, 255, 252, 1);
+              border-radius: 4px;
+              line-height: 45px;
+              margin-right: 20px;
+              vertical-align: bottom;
+              font-size: 24px;
+              padding: 0 8px;
+              color: #fff;
+            }
+            span {
+              display: inline-block;
+              font-size: 24px;
+              font-family: Microsoft YaHei;
+              font-weight: 400;
+              color: rgba(1, 211, 213, 1);
+              line-height: 45px;
+            }
+          }
+        }
+      }
+    }
+    .part3 {
+      width: 50%;
+      h5 {
+        font-size: 36px;
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        color: rgba(187, 254, 255, 1);
+        line-height: 45px;
+        text-align: left;
+        padding: 20px 0 10px;
+        &.special {
+          margin-top: 20px;
+        }
+        & > i {
+          display: inline-block;
+          width: 99px;
+          height: 40px;
+          background: url("../assets/images/step6/icon-ground.png") center center no-repeat;
+          background-size: 99px 40px;
+          margin-left: 28px;
+          vertical-align: middle;
+        }
+      }
+      & > div {
+        display: flex;
+        flex-wrap: wrap;
+        .part-item {
+          width: 33%;
+          h6 {
+            font-size: 30px;
+            font-family: Microsoft YaHei;
+            font-weight: bold;
+            color: rgba(0, 251, 255, 1);
+            line-height: 45px;
+            padding: 10px 0 20px;
+          }
+          p {
+            font-size: 24px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            line-height: 1;
+            padding: 14px 0;
+            i {
+              display: inline-block;
+              width: 99px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+              cursor: pointer;
+              border-radius: 20px;
+              overflow: hidden;
+            }
+            .btn-open {
+              margin-right: 16px;
+              background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+              &.active {
+                box-shadow: 0px 0px 29px 3px rgba(0, 255, 252, 1);
+                // background: url("../assets/images/step6/icon-opened.png") center center no-repeat;
+              }
+            }
+            .btn-close {
+              background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+              &.active {
+                box-shadow: 0px 0px 29px 3px rgba(255, 73, 73, 1);
+                // background: url("../assets/images/step6/icon-closed.png") center center no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+    .part4 {
+      h6 {
+        font-size: 30px;
+        font-family: Microsoft YaHei;
+        font-weight: bold;
+        color: rgba(187, 254, 255, 1);
+        line-height: 45px;
+      }
+      p.btn-box {
+        font-size: 24px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 1;
+        padding: 16px 0;
+        i {
+          display: inline-block;
+          width: 99px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          cursor: pointer;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+        .btn-open {
+          margin-right: 16px;
+          background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+          &.active {
+            box-shadow: 0px 0px 29px 3px rgba(0, 255, 252, 1);
+            // background: url("../assets/images/step6/icon-opened.png") center center no-repeat;
+          }
+        }
+        .btn-close {
+          background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+          &.active {
+            box-shadow: 0px 0px 29px 3px rgba(255, 73, 73, 1);
+            // background: url("../assets/images/step6/icon-closed.png") center center no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .router {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    i {
+      width: 28px;
+      height: 26px;
+      display: inline-block;
+      background: url("../assets/images/step1/icon-arror-back.png") center center no-repeat;
+      background-size: 28px 26px;
+      margin-right: 14px;
+    }
+    font-size: 30px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #bbfeff;
+    line-height: 45px;
+  }
   h4 {
     font-size: 24px;
     padding-top: 100px;
@@ -6,8 +257,8 @@
     // padding: 20px 0;
   }
   h5 {
-    text-align: center;
-    padding: 20px 0;
+    // text-align: center;
+    // padding: 20px 0;
   }
   .test-box {
     display: flex;

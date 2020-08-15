@@ -1,6 +1,274 @@
 <template>
   <div class="demo">
-    <h4>演示阀</h4>
+    <h3></h3>
+    <p class="timer">{{nowTime}}</p>
+    <div class="main-content">
+      <div class="part1">
+        <h5>
+          <i></i>性能试验台出水管
+        </h5>
+        <div class="part-item">
+          <div>
+            <p>高位压力:</p>
+            <strong>
+              <i>{{swtchInfo.waterPipe1HighWaterPressure}}</i>
+              <span>KPa</span>
+            </strong>
+          </div>
+          <div>
+            <p>目标流量</p>
+            <strong>
+              <i @click="config('VW1042',configInfo.waterPipe1Flow)">{{configInfo.waterPipe1Flow}}</i>
+              <span>M3/H</span>
+            </strong>
+          </div>
+        </div>
+        <div class="part-item">
+          <div>
+            <p>低位压力:</p>
+            <strong>
+              <i>{{swtchInfo.waterPipe1LowWaterPressure}}</i>
+              <span>KPa</span>
+            </strong>
+          </div>
+          <div>
+            <p>实际流量</p>
+            <strong>
+              <i>{{swtchInfo.waterPipe1Flow}}</i>
+              <span>KPa</span>
+            </strong>
+          </div>
+        </div>
+      </div>
+      <div class="part1">
+        <h5>
+          <i></i>地下室出水总管路
+        </h5>
+        <div class="part-item">
+          <div>
+            <p>目标压力:</p>
+            <strong>
+              <i
+                @click="config('VW1038',configInfo.waterPipe2Pressure)"
+              >{{configInfo.waterPipe2Pressure}}</i>
+              <span>KPa</span>
+            </strong>
+          </div>
+          <div>
+            <p>目标流量</p>
+            <strong>
+              <i @click="config('VW1040',configInfo.waterPipe2Flow)">{{configInfo.waterPipe2Flow}}</i>
+              <span>M3/H</span>
+            </strong>
+          </div>
+        </div>
+        <div class="part-item">
+          <div>
+            <p>实际压力</p>
+            <strong>
+              <i>{{swtchInfo.waterPipe2Pressure}}</i>
+              <span>KPa</span>
+            </strong>
+          </div>
+          <div>
+            <p>实际流量</p>
+            <strong>
+              <i>{{swtchInfo.waterPipe2Flow}}</i>
+              <span>M3/H</span>
+            </strong>
+          </div>
+        </div>
+      </div>
+      <div class="part1"></div>
+      <div class="part1">
+        <h5 class="special">
+          <i></i>调节阀
+          <strong>
+            开度：
+            <i
+              @click="config('VW1038',configInfo.waterPipe2Pressure)"
+            >{{configInfo.waterPipe2Pressure}}</i>
+            <span>%</span>
+          </strong>
+        </h5>
+      </div>
+      <div class="part3">
+        <h5>
+          选择开关:
+          <i></i>
+        </h5>
+        <div>
+          <div class="part-item">
+            <h6>景观演示阀</h6>
+            <p>
+              <i @click="viewOpen" class="btn-open">打开</i>
+              <i @click="viewClose" class="btn-close">关闭</i>
+            </p>
+            <p>
+              <i class="btn-open" :class="{active:swtchInfo.isViewOpened}">开到位</i>
+              <i class="btn-close" :class="{active:swtchInfo.isViewClosed}">关到位</i>
+            </p>
+          </div>
+          <div class="part-item">
+            <h6>拟态降雨演示阀</h6>
+            <p>
+              <i @click="rainfallOpen" class="btn-open">打开</i>
+              <i @click="rainfallClose" class="btn-close">关闭</i>
+            </p>
+            <p>
+              <i class="btn-open" :class="{active:swtchInfo.isRainfallOpened}">开到位</i>
+              <i class="btn-close" :class="{active:swtchInfo.isRainfallClosed}">关到位</i>
+            </p>
+          </div>
+          <div class="part-item">
+            <h6>虹吸效果演示阀</h6>
+            <p>
+              <i @click="siphonOpen" class="btn-open">打开</i>
+              <i @click="rainfallClose" class="btn-close">关闭</i>
+            </p>
+            <p>
+              <i class="btn-open" :class="{active:swtchInfo.isSiphonOpened}">开到位</i>
+              <i class="btn-close" :class="{active:swtchInfo.isSiphonClosed}">关到位</i>
+            </p>
+          </div>
+          <div class="part-item">
+            <h6>同层排水演示阀</h6>
+            <p>
+              <i @click="sameFloorDrainageOpen" class="btn-open">打开</i>
+              <i @click="sameFloorDrainageClose" class="btn-close">关闭</i>
+            </p>
+            <p>
+              <i class="btn-open" :class="{active:swtchInfo.isSameFloorDrainageOpened}">开到位</i>
+              <i class="btn-close" :class="{active:swtchInfo.isSameFloorDrainageClosed}">关到位</i>
+            </p>
+          </div>
+          <div class="part-item">
+            <h6>内涝调控演示阀</h6>
+            <p>
+              <i @click="waterloggingControlOpen" class="btn-open">打开</i>
+              <i @click="waterloggingControlClose" class="btn-close">关闭</i>
+            </p>
+            <p>
+              <i class="btn-open" :class="{active:swtchInfo.isWaterloggingControlOpened}">开到位</i>
+              <i class="btn-close" :class="{active:swtchInfo.isWaterloggingControlClosed}">关到位</i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="part4">
+        <h5>
+          <i></i>地下室水箱
+        </h5>
+        <div class="part-item">
+          <div>
+            <h6>潜水泵1</h6>
+            <p class="btn-box">
+              <i @click="waterTank1Open" class="btn-open">启动</i>
+              <i @click="waterTank1Close" class="btn-close">停止</i>
+            </p>
+          </div>
+          <div>
+            <h6>潜水泵2</h6>
+            <p class="btn-box">
+              <i @click="waterTank2Open" class="btn-open">启动</i>
+              <i @click="waterTank2Close" class="btn-close">停止</i>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                频设定率:
+                <i @click="config('VW1032',configInfo.waterTank1F)">{{configInfo.waterTank1F}}</i>
+                <span>Hz</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                频设定率:
+                <i @click="config('VW1032',configInfo.waterTank2F)">{{configInfo.waterTank2F}}</i>
+                <span>Hz</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行频率:
+                <i>{{swtchInfo.waterTank1F}}</i>
+                <span>Hz</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行频率:
+                <i>{{swtchInfo.waterTank2F}}</i>
+                <span>Hz</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行电流:
+                <i>{{swtchInfo.waterTank1A}}</i>
+                <span>A</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行电流:
+                <i>{{swtchInfo.waterTank2A}}</i>
+                <span>A</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行功率:
+                <i>{{swtchInfo.waterTank1P}}</i>
+                <span>KW</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行功率:
+                <i>{{swtchInfo.waterTank2P}}</i>
+                <span>KW</span>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行状态:
+                <i>{{swtchInfo.waterTank1Status}}</i>
+              </strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                运行状态:
+                <i>{{swtchInfo.waterTank1Status}}</i>
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a @click="$emit('step-change',0)" class="router" href="javascript:void(0)">
+      <i></i>返回目录
+    </a>
+    <!-- <h4>演示阀</h4>
     <div class="test-box">
       <div class="test-item">
         <h5>景观演示阀</h5>
@@ -245,7 +513,7 @@
           >{{configInfo.regulatingValve}}</strong>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -255,6 +523,8 @@ export default {
   name: "Demo",
   data() {
     return {
+      nowTime: "",
+      apiToken: "",
       loadingInfo: {
         viewOpen: false,
         viewClose: false,
@@ -411,8 +681,7 @@ export default {
               tag: temp,
               value: Number(value).toFixed(1),
             };
-            httpService.configData(configInfo, function (response) {
-            });
+            httpService.configData(configInfo, function (response) {});
           } else {
             this.$message({
               type: "warn",
@@ -427,14 +696,123 @@ export default {
           });
         });
     },
+    waterTank1Open() {
+      let that = this;
+      httpService.waterTank1Open(function (response) {});
+    },
+    waterTank2Open() {
+      let that = this;
+      httpService.waterTank2Open(function (response) {});
+    },
+    waterTank1Close() {
+      let that = this;
+      httpService.waterTank1Close(function (response) {});
+    },
+    waterTank2Close() {
+      let that = this;
+      httpService.waterTank2Close(function (response) {});
+    },
+    rainfallOpen() {
+      let that = this;
+      httpService.rainfallOpen(function (response) {});
+    },
+    rainfallClose() {
+      let that = this;
+      httpService.rainfallClose(function (response) {});
+    },
+    siphonOpen() {
+      let that = this;
+      httpService.siphonOpen(function (response) {});
+    },
+    sameFloorDrainageOpen() {
+      let that = this;
+      httpService.sameFloorDrainageOpen(function (response) {});
+    },
+    sameFloorDrainageClose() {
+      let that = this;
+      httpService.sameFloorDrainageClose(function (response) {});
+    },
+    waterloggingControlOpen() {
+      let that = this;
+      httpService.waterloggingControlOpen(function (response) {});
+    },
+    waterloggingControlClose() {
+      let that = this;
+      httpService.waterloggingControlClose(function (response) {});
+    },
+    nowTimes() {
+      this.timeFormate(new Date());
+      setInterval(this.nowTimes, 1000);
+      this.clear();
+    },
+    timeFormate(timeStamp) {
+      let year = new Date(timeStamp).getFullYear();
+      let month =
+        new Date(timeStamp).getMonth() + 1 < 10
+          ? "0" + (new Date(timeStamp).getMonth() + 1)
+          : new Date(timeStamp).getMonth() + 1;
+      let date =
+        new Date(timeStamp).getDate() < 10
+          ? "0" + new Date(timeStamp).getDate()
+          : new Date(timeStamp).getDate();
+      let hh =
+        new Date(timeStamp).getHours() < 10
+          ? "0" + new Date(timeStamp).getHours()
+          : new Date(timeStamp).getHours();
+      let mm =
+        new Date(timeStamp).getMinutes() < 10
+          ? "0" + new Date(timeStamp).getMinutes()
+          : new Date(timeStamp).getMinutes();
+      let ss =
+        new Date(timeStamp).getSeconds() < 10
+          ? "0" + new Date(timeStamp).getSeconds()
+          : new Date(timeStamp).getSeconds();
+      var day = new Date(timeStamp).getDay();
+      var weeks = new Array(
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六"
+      );
+      var week = weeks[day];
+      this.nowTime =
+        year +
+        "年" +
+        month +
+        "月" +
+        date +
+        "日," +
+        " " +
+        week +
+        " " +
+        hh +
+        ":" +
+        mm +
+        ":" +
+        ss;
+    },
+    clear() {
+      clearInterval(this.nowTimes);
+      this.nowTimes = null;
+    },
   },
   computed: {},
   created: function () {
     let that = this;
     this.checkIsVidwOpened();
-    setInterval(() => {
+    this.nowTimes();
+    let apiToken = setInterval(() => {
       this.checkIsVidwOpened();
     }, 5000);
+  },
+  destroyed() {
+    if (this.apiToken) {
+      clearInterval(this.apiToken);
+      this.apiToken = "";
+    }
   },
   mounted: function () {
     let that = this;

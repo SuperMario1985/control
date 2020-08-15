@@ -762,4 +762,28 @@
             }
         }
     }
+    .step6 {
+        padding-top: 46px;
+        position: relative;
+        // display: flex;
+        width: 100%;
+        height: 100%;
+        // background: url("../assets/images/step6/bg.png") center center no-repeat;
+        h3{
+            height: 46px;
+            background: url("../assets/images/step6/title.png") center center no-repeat;
+        }
+        .timer{
+            padding-top: 18px;
+            font-size:30px;
+            font-family:PingFang SC;
+            font-weight:400;
+            color:rgba(0,253,250,1);
+            line-height:45px;
+            text-align: center;
+        }
+        .main-content{
+            padding: 0 95px;
+        }
+    }
 }

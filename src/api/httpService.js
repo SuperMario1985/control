@@ -428,6 +428,54 @@ function waterTank2Close(retureFun) {
 
     })
 }
+// 11111111111
+function Open(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/WriteData?tag=V1001.1&value=1"
+    }).then(function (response) {
+        let msg = JSON.stringify(msg);
+        if (retureFun) {
+            retureFun(response);
+        }
+
+    }).catch(function (res) {
+        let msg = JSON.stringify(res);
+        if (retureFun) {
+            retureFun(res);
+        }
+
+    })
+}
+function Close(retureFun) {
+    let resultInfo = {
+        success: false,
+        data: null,
+        msg: ''
+    }
+    httpServe({
+        method: "get",
+        url: host + "/dataProcess/WriteData?tag=V1001.1&value=1"
+    }).then(function (response) {
+        let msg = JSON.stringify(msg);
+        if (retureFun) {
+            retureFun(response);
+        }
+
+    }).catch(function (res) {
+        let msg = JSON.stringify(res);
+        if (retureFun) {
+            retureFun(res);
+        }
+
+    })
+}
+// 22222222222222
 // 读取数据
 function checkIsVidwOpened(retureFun) {
     let resultInfo = {

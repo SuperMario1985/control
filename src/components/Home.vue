@@ -742,12 +742,13 @@
         </div>
       </div>
     </div>
-    <div class="step6" v-if="pageStep === 6">6</div>
+    <demo v-on:step-change="pageStep = $event" v-if="pageStep === 6"></demo>
   </div>
 </template>
 
 <script>
 import httpService from "../api/httpService";
+import Demo from "./demo"
 export default {
   name: "Home",
   data() {
@@ -765,7 +766,9 @@ export default {
   mounted: function () {
     let that = this;
   },
-  components: {},
+  components: {
+    Demo
+  },
 };
 </script>
 
