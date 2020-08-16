@@ -696,6 +696,13 @@ export default {
           });
         });
     },
+    configData(tag, value) {
+      let configInfo = {
+        tag: tag,
+        value: value,
+      };
+      httpService.configData(configInfo, function (response) {});
+    },
     waterTank1Open() {
       let that = this;
       httpService.waterTank1Open(function (response) {});

@@ -173,6 +173,7 @@
             .acction-box {
                 margin-left: 100px;
                 text-align: center;
+                padding-top: 80px;
                 .flur {
                     position: relative;
                     img {
@@ -202,27 +203,106 @@
                 }
                 a {
                     display: block;
-                    width: 100%;
+                    width: 202px;
+                    font-size: 30px;
                     height: 80px;
                     line-height: 80px;
                     text-align: center;
-                    background: url("../assets/images/step1/bg-btn.png") center center no-repeat;
-                    background-size: 100% 80px;
-                    font-size: 30px;
-                    font-family: Microsoft YaHei;
-                    font-weight: 400;
-                    color: rgba(209, 231, 255, 1);
-                    &.active {
-                        background: url("../assets/images/step1/bg-btn-active.png") center center no-repeat;
-                        background-size: 100% 80px;
-                        font-weight: bold;
-                        color: rgba(209, 231, 255, 1);
-                    }
+                    color: #fff;
+                    // &.active {
+                    //     background: url("../assets/images/step1/bg-btn-active.png") center center no-repeat;
+                    //     background-size: 100% 80px;
+                    //     font-weight: bold;
+                    //     color: rgba(209, 231, 255, 1);
+                    // }
                     &.open {
-                        margin-top: 76px;
+                        margin-top: 68px;
+                        border: 1px solid rgba(0, 255, 255, 1);
+                        background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
+                        border-radius: 10px;
                     }
                     &.close {
-                        margin-top: 40px;
+                        margin-top: 36px;
+                        border: 1px solid rgba(255, 104, 74, 1);
+                        background: linear-gradient(0deg, rgba(193, 44, 44, 1) 0%, rgba(255, 109, 80, 1) 100%);
+                        border-radius: 10px;
+                    }
+                }
+                .pop {
+                    text-align: left;
+                    h6 {
+                        font-size: 30px;
+                        font-family: Microsoft YaHei;
+                        font-weight: bold;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 45px;
+                    }
+                    p {
+                        padding: 17px 0 13px;
+                        font-size: 24px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 1;
+                    }
+                    div {
+                        i {
+                            position: relative;
+                            display: inline-block;
+                            width: 182px;
+                            height: 46px;
+                            line-height: 46px;
+                            text-align: left;
+                            padding: 0 8px;
+                            background: rgba(255, 255, 255, 1);
+                            border: 1px solid rgba(51, 51, 51, 1);
+                            border-radius: 4px;
+                            color: rgba(51, 51, 51, 1);
+                            span {
+                                position: absolute;
+                                top: 0px;
+                                right: 10px;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                }
+                .show-box {
+                    text-align: left;
+                    h6 {
+                        padding: 56px 0 33px;
+                        font-size: 30px;
+                        font-family: Microsoft YaHei;
+                        font-weight: bold;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 1;
+                    }
+                    p {
+                        .full-opened {
+                            display: inline-block;
+                            width: 99px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                            margin-right: 18px;
+                            visibility: hidden;
+                            &.active {
+                                visibility: visible;
+                            }
+                        }
+                        .full-closed {
+                            display: inline-block;
+                            width: 99px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                            visibility: hidden;
+                            &.active {
+                                visibility: visible;
+                            }
+                        }
                     }
                 }
             }
@@ -450,6 +530,7 @@
         display: flex;
         width: 100%;
         height: 100%;
+        background: url("../assets/images/common/bg-right.png") 1600px center no-repeat;
         .left-side {
             width: 418px;
             height: 100%;
@@ -630,11 +711,11 @@
     }
     .step2 {
         .right-side {
-            margin-left: -150px;
+            margin-left: -260px;
             .right-content {
                 .action-box {
-                    width: 178px;
-                    padding-top: 300px;
+                    width: 218px;
+                    padding-top: 380px;
                     & > p {
                         padding-bottom: 20px;
                         i {
@@ -642,6 +723,83 @@
                             }
                             &.close-button {
                                 margin-top: 60px;
+                            }
+                        }
+                    }
+                    .pop {
+                        text-align: left;
+                        h6 {
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                        }
+                        p {
+                            padding: 17px 0 13px;
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        div {
+                            i {
+                                position: relative;
+                                display: inline-block;
+                                width: 182px;
+                                height: 46px;
+                                line-height: 46px;
+                                text-align: left;
+                                padding: 0 8px;
+                                background: rgba(255, 255, 255, 1);
+                                border: 1px solid rgba(51, 51, 51, 1);
+                                border-radius: 4px;
+                                color: rgba(51, 51, 51, 1);
+                                span {
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 10px;
+                                    z-index: 10;
+                                }
+                            }
+                        }
+                    }
+                    .show-box {
+                        text-align: left;
+                        h6 {
+                            padding: 56px 0 33px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        p {
+                            .full-opened {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                margin-right: 18px;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
+                            }
+                            .full-closed {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
                             }
                         }
                     }
@@ -660,9 +818,31 @@
                                 height: auto;
                                 cursor: pointer;
                             }
+                            i {
+                                display: inline-block;
+                                width: 98px;
+                                padding-top: 110px;
+                                font-size: 34px;
+                                font-family: Microsoft YaHei;
+                                font-weight: bold;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 45px;
+                                margin: 0 34px;
+                                cursor: pointer;
+                                text-align: center;
+                                &.start-button {
+                                    background: url("../assets/images/common/icon-open.png") center 0px no-repeat;
+                                    background-size: 98px 98px;
+                                    margin-left: 60px;
+                                }
+                                &.close-button {
+                                    background: url("../assets/images/common/icon-close.png") center 0px no-repeat;
+                                    background-size: 98px 98px;
+                                }
+                            }
                         }
                         p {
-                            padding-top: 45px;
+                            padding-top: 22px;
                             font-size: 30px;
                             font-family: Microsoft YaHei;
                             font-weight: 400;
@@ -676,9 +856,130 @@
     }
     .step3 {
         .right-side {
+            margin-left: -200px;
             .right-content {
                 .action-box {
-                    padding-top: 130px;
+                    width: 600px;
+                    padding-top: 100px;
+                    display: flex;
+                    .action1 {
+                        .pop {
+                            text-align: left;
+                            h6 {
+                                padding: 20px 0 17px;
+                                font-size: 30px;
+                                font-family: Microsoft YaHei;
+                                font-weight: bold;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 1;
+                            }
+                            p {
+                                padding: 17px 0 13px;
+                                font-size: 24px;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 1;
+                            }
+                            div {
+                                i {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 182px;
+                                    height: 46px;
+                                    line-height: 46px;
+                                    text-align: left;
+                                    padding: 0 8px;
+                                    background: rgba(255, 255, 255, 1);
+                                    border: 1px solid rgba(51, 51, 51, 1);
+                                    border-radius: 4px;
+                                    color: rgba(51, 51, 51, 1);
+                                    span {
+                                        position: absolute;
+                                        top: 0px;
+                                        right: 10px;
+                                        z-index: 10;
+                                    }
+                                }
+                            }
+                        }
+                        .show-box {
+                            text-align: left;
+                            padding-bottom: 20px;
+                            h6 {
+                                padding: 16px 0 33px;
+                                font-size: 30px;
+                                font-family: Microsoft YaHei;
+                                font-weight: bold;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 1;
+                            }
+                            p {
+                                .full-opened {
+                                    display: inline-block;
+                                    width: 99px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                    margin-right: 18px;
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                                .full-closed {
+                                    display: inline-block;
+                                    width: 99px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .action2 {
+                        flex: 1;
+                        text-align: left;
+                        padding-left: 50px;
+                        span {
+                            display: inline-block;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                            margin-right: 34px;
+                            &.special {
+                                visibility: hidden;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            width: 202px;
+                            font-size: 30px;
+                            height: 80px;
+                            line-height: 80px;
+                            text-align: center;
+                            color: #fff;
+                            &.open {
+                                margin-bottom: 68px;
+                                border: 1px solid rgba(0, 255, 255, 1);
+                                background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
+                                border-radius: 10px;
+                            }
+                            &.close {
+                                border: 1px solid rgba(255, 104, 74, 1);
+                                background: linear-gradient(0deg, rgba(193, 44, 44, 1) 0%, rgba(255, 109, 80, 1) 100%);
+                                border-radius: 10px;
+                            }
+                        }
+                    }
                 }
                 .info-box {
                     padding-top: 150px;
@@ -694,7 +995,132 @@
                         }
                     }
                     p {
-                        width: 847px;
+                        width: 840px;
+                    }
+                }
+            }
+        }
+    }
+    .step4 {
+        .right-side {
+            .right-content {
+                margin-left: -72px;
+                .action-box {
+                    padding-top: 108px;
+                    .pop {
+                        text-align: left;
+                        h6 {
+                            padding: 20px 0 0px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        p {
+                            padding: 33px 0 13px;
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        div {
+                            i {
+                                position: relative;
+                                display: inline-block;
+                                width: 182px;
+                                height: 46px;
+                                line-height: 46px;
+                                text-align: left;
+                                padding: 0 8px;
+                                background: rgba(255, 255, 255, 1);
+                                border: 1px solid rgba(51, 51, 51, 1);
+                                border-radius: 4px;
+                                color: rgba(51, 51, 51, 1);
+                                span {
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 10px;
+                                    z-index: 10;
+                                }
+                            }
+                        }
+                    }
+                    .show-box {
+                        text-align: left;
+                        padding-bottom: 48px;
+                        h6 {
+                            padding: 45px 0 33px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        p {
+                            .full-opened {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                margin-right: 18px;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
+                            }
+                            .full-closed {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                    .btn-box {
+                        text-align: left;
+                        padding-bottom: 0px;
+                        span {
+                            display: inline-block;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                            margin-right: 34px;
+                            &.special {
+                                visibility: hidden;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            width: 202px;
+                            font-size: 30px;
+                            height: 80px;
+                            line-height: 80px;
+                            text-align: center;
+                            color: #fff;
+                            &.open {
+                                margin-bottom: 62px;
+                                border: 1px solid rgba(0, 255, 255, 1);
+                                background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
+                                border-radius: 10px;
+                            }
+                            &.close {
+                                border: 1px solid rgba(255, 104, 74, 1);
+                                background: linear-gradient(0deg, rgba(193, 44, 44, 1) 0%, rgba(255, 109, 80, 1) 100%);
+                                border-radius: 10px;
+                            }
+                        }
                     }
                 }
             }
@@ -705,8 +1131,126 @@
             width: 360px;
         }
         .right-side {
-            margin-left: -150px;
+            margin-left: -80px;
             .right-content {
+                .action-box {
+                    padding-top: 108px;
+                    .pop {
+                        text-align: left;
+                        h6 {
+                            padding: 20px 0 0px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        p {
+                            padding: 33px 0 13px;
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        div {
+                            i {
+                                position: relative;
+                                display: inline-block;
+                                width: 182px;
+                                height: 46px;
+                                line-height: 46px;
+                                text-align: left;
+                                padding: 0 8px;
+                                background: rgba(255, 255, 255, 1);
+                                border: 1px solid rgba(51, 51, 51, 1);
+                                border-radius: 4px;
+                                color: rgba(51, 51, 51, 1);
+                                span {
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 10px;
+                                    z-index: 10;
+                                }
+                            }
+                        }
+                    }
+                    .show-box {
+                        text-align: left;
+                        padding-bottom: 48px;
+                        h6 {
+                            padding: 45px 0 33px;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 1;
+                        }
+                        p {
+                            .full-opened {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                margin-right: 18px;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
+                            }
+                            .full-closed {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                visibility: hidden;
+                                &.active {
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                    .btn-box {
+                        text-align: left;
+                        padding-bottom: 0px;
+                        span {
+                            display: inline-block;
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 45px;
+                            margin-right: 34px;
+                            &.special {
+                                visibility: hidden;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            width: 202px;
+                            font-size: 30px;
+                            height: 80px;
+                            line-height: 80px;
+                            text-align: center;
+                            color: #fff;
+                            &.open {
+                                margin-bottom: 62px;
+                                border: 1px solid rgba(0, 255, 255, 1);
+                                background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
+                                border-radius: 10px;
+                            }
+                            &.close {
+                                border: 1px solid rgba(255, 104, 74, 1);
+                                background: linear-gradient(0deg, rgba(193, 44, 44, 1) 0%, rgba(255, 109, 80, 1) 100%);
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
                 .info-box {
                     flex: 1;
                     padding-top: 100px;
@@ -762,28 +1306,305 @@
             }
         }
     }
-    .step6 {
+    .demo {
         padding-top: 46px;
         position: relative;
         // display: flex;
         width: 100%;
         height: 100%;
-        // background: url("../assets/images/step6/bg.png") center center no-repeat;
-        h3{
+        background: url("../assets/images/step6/bg.png") center center no-repeat;
+        h3 {
             height: 46px;
             background: url("../assets/images/step6/title.png") center center no-repeat;
         }
-        .timer{
+        .timer {
             padding-top: 18px;
-            font-size:30px;
-            font-family:PingFang SC;
-            font-weight:400;
-            color:rgba(0,253,250,1);
-            line-height:45px;
+            font-size: 30px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: rgba(0, 253, 250, 1);
+            line-height: 45px;
             text-align: center;
         }
-        .main-content{
+        .main-content {
             padding: 0 95px;
+            display: flex;
+            flex-wrap: wrap;
+            .part1,
+            .part2,
+            .part4 {
+                width: 50%;
+                h5 {
+                    font-size: 36px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(187, 254, 255, 1);
+                    line-height: 45px;
+                    text-align: left;
+                    padding: 20px 0 10px;
+                    &.special {
+                        margin-top: 20px;
+                    }
+                    & > i {
+                        display: inline-block;
+                        width: 7px;
+                        height: 37px;
+                        background: #00fffc;
+                        margin-right: 8px;
+                    }
+                    strong {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 24px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        color: rgba(0, 253, 250, 1);
+                        line-height: 45px;
+                        margin-left: 30px;
+                        i {
+                            display: inline-block;
+                            width: 182px;
+                            height: 46px;
+                            border: 1px solid rgba(0, 255, 252, 1);
+                            border-radius: 4px;
+                            line-height: 45px;
+                            margin-right: 20px;
+                            vertical-align: bottom;
+                            font-size: 24px;
+                            padding: 0 8px;
+                            color: #fff;
+                        }
+                        span {
+                            display: inline-block;
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(1, 211, 213, 1);
+                            line-height: 45px;
+                        }
+                    }
+                }
+                .part-item {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: left;
+                    & > div {
+                        width: 50%;
+                        padding-top: 10px;
+                        p {
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(1, 211, 213, 1);
+                            line-height: 45px;
+                        }
+                        strong {
+                            display: inline-block;
+                            i {
+                                display: inline-block;
+                                width: 182px;
+                                height: 46px;
+                                border: 1px solid rgba(0, 255, 252, 1);
+                                border-radius: 4px;
+                                line-height: 45px;
+                                margin-right: 20px;
+                                vertical-align: bottom;
+                                font-size: 24px;
+                                padding: 0 8px;
+                                color: #fff;
+                            }
+                            span {
+                                display: inline-block;
+                                font-size: 24px;
+                                font-family: Microsoft YaHei;
+                                font-weight: 400;
+                                color: rgba(1, 211, 213, 1);
+                                line-height: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+            .part3 {
+                width: 50%;
+                h5 {
+                    font-size: 36px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(187, 254, 255, 1);
+                    line-height: 45px;
+                    text-align: left;
+                    padding: 20px 0 10px;
+                    &.special {
+                        margin-top: 20px;
+                    }
+                    & > i {
+                        margin-left: 4px;
+                        // display: inline-block;
+                        // width: 99px;
+                        // height: 40px;
+                        // background: url("../assets/images/step6/icon-ground.png") center center no-repeat;
+                        // background-size: 99px 40px;
+                        // margin-left: 28px;
+                        // vertical-align: middle;
+                    }
+                }
+                & > div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .part-item {
+                        width: 33%;
+                        h6 {
+                            font-size: 30px;
+                            font-family: Microsoft YaHei;
+                            font-weight: bold;
+                            color: rgba(0, 251, 255, 1);
+                            line-height: 45px;
+                            padding: 10px 0 20px;
+                        }
+                        p {
+                            font-size: 24px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            color: rgba(255, 255, 255, 1);
+                            line-height: 1;
+                            padding: 14px 0;
+                            i {
+                                display: inline-block;
+                                width: 99px;
+                                height: 40px;
+                                text-align: center;
+                                line-height: 40px;
+                                cursor: pointer;
+                                border-radius: 20px;
+                                overflow: hidden;
+                                &.full-opened {
+                                    margin-right: 16px;
+                                    background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                                &.full-closed {
+                                    margin-right: 16px;
+                                    background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            .btn-open {
+                                margin-right: 16px;
+                                background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                                &.btn-full {
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            .btn-close {
+                                background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                                &.btn-full {
+                                    visibility: hidden;
+                                    &.active {
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .part4 {
+                h6 {
+                    font-size: 30px;
+                    font-family: Microsoft YaHei;
+                    font-weight: bold;
+                    color: rgba(187, 254, 255, 1);
+                    line-height: 45px;
+                }
+                p.btn-box {
+                    font-size: 24px;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 1);
+                    line-height: 1;
+                    padding: 16px 0;
+                    i {
+                        display: inline-block;
+                        width: 99px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        cursor: pointer;
+                        border-radius: 20px;
+                        overflow: hidden;
+                    }
+                    .btn-open {
+                        margin-right: 16px;
+                        background: url("../assets/images/step6/icon-open.png") center center no-repeat;
+                        &.active {
+                            box-shadow: 0px 0px 29px 3px rgba(0, 255, 252, 1);
+                            // background: url("../assets/images/step6/icon-opened.png") center center no-repeat;
+                        }
+                    }
+                    .btn-close {
+                        background: url("../assets/images/step6/icon-close.png") center center no-repeat;
+                        &.active {
+                            box-shadow: 0px 0px 29px 3px rgba(255, 73, 73, 1);
+                            // background: url("../assets/images/step6/icon-closed.png") center center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        .router {
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            i {
+                width: 28px;
+                height: 26px;
+                display: inline-block;
+                background: url("../assets/images/step1/icon-arror-back.png") center center no-repeat;
+                background-size: 28px 26px;
+                margin-right: 14px;
+            }
+            font-size: 30px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #bbfeff;
+            line-height: 45px;
+        }
+        .drawer {
+            padding: 0 20px;
+            /deep/ .el-input {
+                width: auto;
+            }
+            & > div {
+                padding-bottom: 10px;
+                vertical-align: middle;
+                span {
+                    width: 200px;
+                    display: inline-block;
+                    height: 30px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    text-align: right;
+                    padding-right: 6px;
+                }
+                strong {
+                    display: inline-block;
+                    height: 30px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    width: 120px;
+                    border: 1px solid #999;
+                }
+            }
         }
     }
 }

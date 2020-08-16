@@ -429,7 +429,7 @@ function waterTank2Close(retureFun) {
     })
 }
 // 11111111111
-function Open(retureFun) {
+function showerOpen(retureFun) {
     let resultInfo = {
         success: false,
         data: null,
@@ -437,7 +437,7 @@ function Open(retureFun) {
     }
     httpServe({
         method: "get",
-        url: host + "/dataProcess/WriteData?tag=V1001.1&value=1"
+        url: host + "/dataProcess/WriteData?tag=VW1140&value=1"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
@@ -452,7 +452,7 @@ function Open(retureFun) {
 
     })
 }
-function Close(retureFun) {
+function showerClose(retureFun) {
     let resultInfo = {
         success: false,
         data: null,
@@ -460,7 +460,7 @@ function Close(retureFun) {
     }
     httpServe({
         method: "get",
-        url: host + "/dataProcess/WriteData?tag=V1001.1&value=1"
+        url: host + "/dataProcess/WriteData?tag=VW1140&value=0"
     }).then(function (response) {
         let msg = JSON.stringify(msg);
         if (retureFun) {
@@ -549,5 +549,7 @@ export default {
     waterTank2Open,
     waterTank2Close,
     checkIsVidwOpened,
-    configData
+    configData,
+    showerOpen,
+    showerClose
 }
