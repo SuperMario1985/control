@@ -6,10 +6,10 @@
         <div class="log">
           <img src="../assets/images/screen-saver/logo.png" alt />
         </div>
-        <div @click="pageStep = 0" class="img-box">
+        <div @click="goIndexPage" class="img-box">
           <img src="../assets/images/screen-saver/system-name.png" alt />
         </div>
-        <div @click="pageStep = 0" class="active-box">
+        <div @click="goIndexPage" class="active-box">
           <i></i>欢迎使用,点击进入
         </div>
         <p class="compony-name">北京泰宁科创雨水利用技术股份有限公司</p>
@@ -36,7 +36,7 @@
             <span @click="goStep(5)">内涝排水</span>
           </li>
           <li class="index6">
-            <span @click="goStep(6)">调试界面</span>
+            <span @click="goIndexPage">调试界面</span>
           </li>
         </ul>
       </div>
@@ -75,53 +75,53 @@
           <a @click="showerOpen" class="open" href="javascript:void(0)">启动</a>
           <a @click="showerClose" class="close" href="javascript:void(0)">停止</a>
         </div>
-        <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+        <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
         </a>
       </div>
       <div class="right-side">
         <ul>
           <li>
-            <a @click="pageStep=1.4" href="javascript:void(0)">
+            <a @click="pageStep=1.4;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/1.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.1" href="javascript:void(0)">
+            <a @click="pageStep=1.1;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/2.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.1" href="javascript:void(0)">
+            <a @click="pageStep=1.1;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/3.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.5" href="javascript:void(0)">
+            <a @click="pageStep=1.5;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/4.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.2" href="javascript:void(0)">
+            <a @click="pageStep=1.2;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/5.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.2" href="javascript:void(0)">
+            <a @click="pageStep=1.2;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/6.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.3" href="javascript:void(0)">
+            <a @click="pageStep=1.3;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/7.png" alt />
             </a>
           </li>
           <li>
-            <a @click="pageStep=1.3" href="javascript:void(0)">
+            <a @click="pageStep=1.3;addTimeoutTken()" href="javascript:void(0)">
               <img src="../assets/images/step1/8.png" alt />
             </a>
           </li>
-          <li @click="pageStep=1.4">
+          <li @click="pageStep=1.4;addTimeoutTken()">
             <a href="javascript:void(0)">
               <img src="../assets/images/step1/9.png" alt />
             </a>
@@ -139,7 +139,7 @@
           </div>
           <div class="p3">Core product - Penetration</div>
         </div>
-        <a @click="pageStep = 1" class="router" href="javascript:void(0)">
+        <a @click="pageStep=1;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回景观
         </a>
       </div>
@@ -199,10 +199,10 @@
           </li>
         </ul>
         <div class="router">
-          <a @click="pageStep = 1.5" href="javascript:void(0)">
+          <a @click="pageStep=1.5;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 1.2" href="javascript:void(0)">
+          <a @click="pageStep=1.2;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -219,7 +219,7 @@
           </div>
           <div class="p3">Core product - Penetration</div>
         </div>
-        <a @click="pageStep = 1" class="router" href="javascript:void(0)">
+        <a @click="pageStep=1;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回景观
         </a>
       </div>
@@ -279,10 +279,10 @@
           </li>
         </ul>
         <div class="router">
-          <a @click="pageStep = 1.1" href="javascript:void(0)">
+          <a @click="pageStep=1.1;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 1.3" href="javascript:void(0)">
+          <a @click="pageStep=1.3;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -299,7 +299,7 @@
           </div>
           <div class="p3">Core product - storage</div>
         </div>
-        <a @click="pageStep = 1" class="router" href="javascript:void(0)">
+        <a @click="pageStep=1;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回景观
         </a>
       </div>
@@ -365,10 +365,10 @@
           </li>
         </ul>
         <div class="router">
-          <a @click="pageStep = 1.2" href="javascript:void(0)">
+          <a @click="pageStep=1.2;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 1.4" href="javascript:void(0)">
+          <a @click="pageStep=1.4;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -385,7 +385,7 @@
           </div>
           <div class="p3">Core product - storage</div>
         </div>
-        <a @click="pageStep = 1" class="router" href="javascript:void(0)">
+        <a @click="pageStep=1;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回景观
         </a>
       </div>
@@ -445,10 +445,10 @@
           </li>
         </ul>
         <div class="router">
-          <a @click="pageStep = 1.3" href="javascript:void(0)">
+          <a @click="pageStep=1.3;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 1.5" href="javascript:void(0)">
+          <a @click="pageStep=1.5;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -465,7 +465,7 @@
           </div>
           <div class="p3">Core product - row</div>
         </div>
-        <a @click="pageStep = 1" class="router" href="javascript:void(0)">
+        <a @click="pageStep= 1;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回景观
         </a>
       </div>
@@ -528,10 +528,10 @@
           </li>
         </ul>
         <div class="router">
-          <a @click="pageStep = 1.4" href="javascript:void(0)">
+          <a @click="pageStep =1.4;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 1.1" href="javascript:void(0)">
+          <a @click="pageStep =1.1;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -545,7 +545,7 @@
           <div class="p2">拟态降雨</div>
           <div class="p3">Mimicry rainfall</div>
         </div>
-        <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+        <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
         </a>
       </div>
@@ -615,10 +615,10 @@
           </div>
         </div>
         <div class="router">
-          <a @click="pageStep = 1" href="javascript:void(0)">
+          <a @click="pageStep=1;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 3" href="javascript:void(0)">
+          <a @click="pageStep=3;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -632,7 +632,7 @@
           <div class="p2">虹吸排水</div>
           <div class="p3">The siphon drainage</div>
         </div>
-        <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+        <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
         </a>
       </div>
@@ -722,10 +722,10 @@
           </div>
         </div>
         <div class="router">
-          <a @click="pageStep = 2" href="javascript:void(0)">
+          <a @click="pageStep=2;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 4" href="javascript:void(0)">
+          <a @click="pageStep=4;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -739,7 +739,7 @@
           <div class="p2">同层排水</div>
           <div class="p3">Drainage</div>
         </div>
-        <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+        <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
         </a>
       </div>
@@ -788,10 +788,10 @@
           </div>
         </div>
         <div class="router">
-          <a @click="pageStep = 3" href="javascript:void(0)">
+          <a @click="pageStep=3;addTimeoutTken()" href="javascript:void(0)">
             <i class="router-up"></i>上一页
           </a>
-          <a @click="pageStep = 5" href="javascript:void(0)">
+          <a @click="pageStep=5;addTimeoutTken()" href="javascript:void(0)">
             下一页
             <i class="router-down"></i>
           </a>
@@ -805,7 +805,7 @@
           <div class="p2">内涝排水</div>
           <div class="p3">Waterlogging drainage</div>
         </div>
-        <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+        <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
         </a>
       </div>
@@ -960,7 +960,7 @@
               开度：
               <i
                 @click="config('VW1036',configInfo.regulatingValve)"
-              >{{configInfo.waterPipe2Pressure}}</i>
+              >{{configInfo.regulatingValve}}</i>
               <span>%</span>
             </strong>
           </h5>
@@ -1143,10 +1143,22 @@
           </div>
         </div>
       </div>
-      <a @click="pageStep = 0" class="router" href="javascript:void(0)">
+      <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
         <i></i>返回目录
       </a>
     </div>
+    <el-dialog width="600px" title="权限验证" :visible.sync="dialogTableVisible">
+      <div class="password-box" v-if="pageStep===-1">
+        <el-input width="300px" placeholder="请输入密码" v-model="password" show-password></el-input>
+      </div>
+      <div class="password-box" v-if="pageStep=== 0">
+        <el-input width="300px" placeholder="请输入密码" v-model="password" show-password></el-input>
+      </div>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogTableVisible = false">取 消</el-button>
+        <el-button type="primary" @click="confirmPassword">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -1158,8 +1170,11 @@ export default {
   data() {
     return {
       pageStep: -1,
+      password: "",
       nowTime: "",
       apiToken: "",
+      timeoutToken: "",
+      dialogTableVisible: false,
       loadingInfo: {
         viewOpen: false,
         viewClose: false,
@@ -1201,17 +1216,67 @@ export default {
     };
   },
   methods: {
+    goIndexPage() {
+      this.dialogTableVisible = true;
+    },
+    confirmPassword() {
+      if (this.pageStep === -1) {
+        if (this.password === "1234") {
+          this.password = "";
+          this.dialogTableVisible = false;
+          this.pageStep = 0;
+          this.addTimeoutTken();
+        } else {
+          this.$message({
+            message: "密码错误，请重新输入！",
+            type: "warning",
+          });
+        }
+      } else if (this.pageStep === 0) {
+        if (this.password === "1234") {
+          this.password = "";
+          this.dialogTableVisible = false;
+          this.pageStep = 6;
+          this.addTimeoutTken();
+        } else {
+          this.$message({
+            message: "密码错误，请重新输入！",
+            type: "warning",
+          });
+        }
+      }
+    },
     goStep(step) {
       this.pageStep = step;
+      this.addTimeoutTken();
+    },
+    // 清除锁屏定时器
+    clearTimeoutToken() {
+      window.clearTimeout(this.timeoutToken);
+      console.log("清除定时器");
+      this.timeoutToken = null;
+    },
+    addTimeoutTken() {
+      if (this.timeoutToken) {
+        console.log("清除之前的定时器");
+        window.clearTimeout(this.timeoutToken);
+      }
+      this.timeoutToken = setTimeout(() => {
+        console.log("回到屏保");
+        this.loginInfo.status = 1;
+      }, 180000);
+      console.log("开启新的定时器");
     },
     viewOpen() {
       let that = this;
       httpService.viewOpen(function (response) {});
+      this.addTimeoutTken();
     },
     viewClose() {
       let that = this;
       this.isLoading = true;
       httpService.viewClose(function (response) {});
+      this.addTimeoutTken();
     },
     checkIsVidwOpened() {
       let that = this;
@@ -1337,61 +1402,76 @@ export default {
         value: value,
       };
       httpService.configData(configInfo, function (response) {});
+      this.addTimeoutTken();
     },
     waterTank1Open() {
       let that = this;
       httpService.waterTank1Open(function (response) {});
+      this.addTimeoutTken();
     },
     waterTank2Open() {
       let that = this;
       httpService.waterTank2Open(function (response) {});
+      this.addTimeoutTken();
     },
     waterTank1Close() {
       let that = this;
       httpService.waterTank1Close(function (response) {});
+      this.addTimeoutTken();
     },
     waterTank2Close() {
       let that = this;
       httpService.waterTank2Close(function (response) {});
+      this.addTimeoutTken();
     },
     rainfallOpen() {
       let that = this;
       httpService.rainfallOpen(function (response) {});
+      this.addTimeoutTken();
     },
     rainfallClose() {
       let that = this;
       httpService.rainfallClose(function (response) {});
+      this.addTimeoutTken();
     },
     siphonOpen() {
       let that = this;
       httpService.siphonOpen(function (response) {});
+      this.addTimeoutTken();
     },
     siphonClose() {
       let that = this;
       httpService.siphonClose(function (response) {});
+      this.addTimeoutTken();
     },
     sameFloorDrainageOpen() {
       let that = this;
       httpService.sameFloorDrainageOpen(function (response) {});
+      this.addTimeoutTken();
     },
     sameFloorDrainageClose() {
       let that = this;
       httpService.sameFloorDrainageClose(function (response) {});
+      this.addTimeoutTken();
     },
     waterloggingControlOpen() {
       let that = this;
       httpService.waterloggingControlOpen(function (response) {});
+      this.addTimeoutTken();
     },
     waterloggingControlClose() {
       let that = this;
       httpService.waterloggingControlClose(function (response) {});
+      this.addTimeoutTken();
     },
     showerOpen() {
       let that = this;
       httpService.showerOpen(function (response) {});
+      this.addTimeoutTken();
     },
     showerClose() {
       httpService.showerClose(function (response) {});
+      this.addTimeoutTken();
     },
     nowTimes() {
       this.timeFormate(new Date());
@@ -1463,6 +1543,8 @@ export default {
   },
   mounted: function () {
     let that = this;
+    // 屏蔽右键
+    document.oncontextmenu = () => false;
   },
   components: {
     Demo,

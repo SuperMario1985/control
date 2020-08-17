@@ -5,6 +5,15 @@
     height: 100%;
     max-height: 1080px;
     margin: 0 auto;
+    /deep/ .el-dialog__body{
+        min-height: 150px;
+        .password-box{
+            text-align: center;
+            /deep/ .el-input{
+                width: 360px;
+            }
+        }
+    }
     .step {
         position: relative;
         display: flex;
