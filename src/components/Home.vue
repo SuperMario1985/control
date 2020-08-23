@@ -701,6 +701,13 @@
                     <span>KPa</span>
                   </i>
                 </div>
+                <p>实际流量</p>
+                <div>
+                  <i>
+                    {{swtchInfo.waterPipe1Flow}}
+                    <span>M3/H</span>
+                  </i>
+                </div>
               </div>
             </div>
             <div class="action2">
