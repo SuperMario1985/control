@@ -5,11 +5,11 @@
     height: 100%;
     max-height: 1080px;
     margin: 0 auto;
-    /deep/ .el-dialog__body{
+    /deep/ .el-dialog__body {
         min-height: 150px;
-        .password-box{
+        .password-box {
             text-align: center;
-            /deep/ .el-input{
+            /deep/ .el-input {
                 width: 360px;
             }
         }
@@ -218,17 +218,15 @@
                     line-height: 80px;
                     text-align: center;
                     color: #fff;
-                    // &.active {
-                    //     background: url("../assets/images/step1/bg-btn-active.png") center center no-repeat;
-                    //     background-size: 100% 80px;
-                    //     font-weight: bold;
-                    //     color: rgba(209, 231, 255, 1);
-                    // }
+
                     &.open {
                         margin-top: 68px;
                         border: 1px solid rgba(0, 255, 255, 1);
                         background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
                         border-radius: 10px;
+                        &.active {
+                            background: url("../assets/images/common/btn-active.gif") center center no-repeat;
+                        }
                     }
                     &.close {
                         margin-top: 36px;
@@ -843,6 +841,10 @@
                                     background: url("../assets/images/common/icon-open.png") center 0px no-repeat;
                                     background-size: 98px 98px;
                                     margin-left: 60px;
+                                    &.active {
+                                        background: url("../assets/images/common/btn2-active.gif") center 0px no-repeat;
+                                        background-size: 98px 98px;
+                                    }
                                 }
                                 &.close-button {
                                     background: url("../assets/images/common/icon-close.png") center 0px no-repeat;
@@ -981,6 +983,9 @@
                                 border: 1px solid rgba(0, 255, 255, 1);
                                 background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
                                 border-radius: 10px;
+                                &.active {
+                                    background: url("../assets/images/common/btn-active.gif") center center no-repeat;
+                                }
                             }
                             &.close {
                                 border: 1px solid rgba(255, 104, 74, 1);
@@ -1123,6 +1128,9 @@
                                 border: 1px solid rgba(0, 255, 255, 1);
                                 background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
                                 border-radius: 10px;
+                                &.active {
+                                    background: url("../assets/images/common/btn-active.gif") center center no-repeat;
+                                }
                             }
                             &.close {
                                 border: 1px solid rgba(255, 104, 74, 1);
@@ -1251,6 +1259,9 @@
                                 border: 1px solid rgba(0, 255, 255, 1);
                                 background: linear-gradient(0deg, rgba(0, 97, 116, 1) 0%, rgba(0, 201, 173, 1) 100%);
                                 border-radius: 10px;
+                                &.active {
+                                    background: url("../assets/images/common/btn-active.gif") center center no-repeat;
+                                }
                             }
                             &.close {
                                 border: 1px solid rgba(255, 104, 74, 1);

@@ -49,12 +49,6 @@
           <div class="p3">Landscape presentation</div>
         </div>
         <div class="acction-box" v-if="swtchInfo">
-          <!-- <div class="flur">
-            <i>10m/h</i>
-            <img src="../assets/images/step1/watch.png" alt />
-            <br />
-            <span>供水流量</span>
-          </div>-->
           <div class="pop">
             <h6>潜水泵1</h6>
             <p>运行频率:</p>
@@ -72,8 +66,13 @@
               <i class="full-closed" :class="{active:swtchInfo.isViewClosed}">关到位</i>
             </p>
           </div>
-          <a @click="showerOpen" class="open" href="javascript:void(0)">启动</a>
-          <a @click="showerClose" class="close" href="javascript:void(0)">停止</a>
+          <a
+            @click="showerOpen"
+            class="open"
+            :class="{active:pageInfo.page1Btn ===1}"
+            href="javascript:void(0)"
+          >启动</a>
+          <a @click="stopAll" class="close" href="javascript:void(0)">停止</a>
         </div>
         <a @click="pageStep=0;addTimeoutTken()" class="router" href="javascript:void(0)">
           <i></i>返回目录
@@ -552,10 +551,6 @@
       <div class="right-side">
         <div class="right-content">
           <div class="action-box">
-            <!-- <p>
-              <i class="start-button">降雨</i>
-            </p>-->
-
             <div class="pop">
               <h6>潜水泵1</h6>
               <p>运行频率:</p>
@@ -574,41 +569,65 @@
               </p>
             </div>
             <p>
-              <i @click="configData('VW1142',0)" class="close-button">停雨</i>
+              <i @click="stopAll" class="close-button">停雨</i>
             </p>
           </div>
           <div class="show-rain">
             <div class="show-rain-item">
               <div>
                 <img src="../assets/images/step2/rain01.png" alt />
-                <i @click="configData('VW1142',1)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',1);pageInfo.page2Btn=1"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===1}"
+                >降雨</i>
                 <p>小雨：24h降雨量小于10mm</p>
               </div>
               <div>
                 <img src="../assets/images/step2/rain03.png" alt />
-                <i @click="configData('VW1142',2)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',2);pageInfo.page2Btn=2"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===2}"
+                >降雨</i>
                 <p>中雨：24h降雨量10～25mm</p>
               </div>
               <div>
                 <img src="../assets/images/step2/rain05.png" alt />
-                <i @click="configData('VW1142',4)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',4);pageInfo.page2Btn=3"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===3}"
+                >降雨</i>
                 <p>大雨：24h降雨量25～50mm</p>
               </div>
             </div>
             <div class="show-rain-item">
               <div>
                 <img src="../assets/images/step2/rain02.png" alt />
-                <i @click="configData('VW1142',8)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',8);pageInfo.page2Btn=4"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===4}"
+                >降雨</i>
                 <p>暴雨：24h降雨量50～100mm</p>
               </div>
               <div>
                 <img src="../assets/images/step2/rain04.png" alt />
-                <i @click="configData('VW1142',16)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',16);pageInfo.page2Btn=5"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===5}"
+                >降雨</i>
                 <p>大暴雨：24h降雨量100～250mm</p>
               </div>
               <div>
                 <img src="../assets/images/step2/rain06.png" alt />
-                <i @click="configData('VW1142',32)" class="start-button">降雨</i>
+                <i
+                  @click="configData('VW1142',32);pageInfo.page2Btn=6"
+                  class="start-button"
+                  :class="{active:pageInfo.page2Btn===6}"
+                >降雨</i>
                 <p>特大暴雨：24h降雨量250mm以上</p>
               </div>
             </div>
@@ -687,27 +706,52 @@
             <div class="action2">
               <p>
                 <span>频率1</span>
-                <a @click="configData('VW1144',1)" class="open" href="javascript:void(0)">启动</a>
+                <a
+                  @click="configData('VW1144',1);pageInfo.page3Btn=1"
+                  class="open"
+                  :class="{active:pageInfo.page3Btn===1}"
+                  href="javascript:void(0)"
+                >启动</a>
               </p>
               <p>
                 <span>频率2</span>
-                <a @click="configData('VW1144',2)" class="open" href="javascript:void(0)">启动</a>
+                <a
+                  @click="configData('VW1144',2);pageInfo.page3Btn=2"
+                  class="open"
+                  :class="{active:pageInfo.page3Btn===2}"
+                  href="javascript:void(0)"
+                >启动</a>
               </p>
               <p>
                 <span>频率3</span>
-                <a @click="configData('VW1144',4)" class="open" href="javascript:void(0)">启动</a>
+                <a
+                  @click="configData('VW1144',4);pageInfo.page3Btn=3"
+                  class="open"
+                  :class="{active:pageInfo.page3Btn===3}"
+                  href="javascript:void(0)"
+                >启动</a>
               </p>
               <p>
                 <span>频率4</span>
-                <a @click="configData('VW1144',8)" class="open" href="javascript:void(0)">启动</a>
+                <a
+                  @click="configData('VW1144',8);pageInfo.page3Btn=4"
+                  class="open"
+                  :class="{active:pageInfo.page3Btn===4}"
+                  href="javascript:void(0)"
+                >启动</a>
               </p>
               <p>
                 <span>频率5</span>
-                <a @click="configData('VW1144',16)" class="open" href="javascript:void(0)">启动</a>
+                <a
+                  @click="configData('VW1144',16);pageInfo.page3Btn=5"
+                  class="open"
+                  :class="{active:pageInfo.page3Btn===5}"
+                  href="javascript:void(0)"
+                >启动</a>
               </p>
               <p>
                 <span class="special">频率0</span>
-                <a @click="configData('VW1144',0)" class="close" href="javascript:void(0)">停止</a>
+                <a @click="stopAll" class="close" href="javascript:void(0)">停止</a>
               </p>
             </div>
           </div>
@@ -765,19 +809,34 @@
             </div>
             <p class="btn-box">
               <span>频率1</span>
-              <a @click="configData('VW1146',1)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1146',1);pageInfo.page4Btn=1"
+                class="open"
+                :class="{active:pageInfo.page4Btn===1}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span>频率2</span>
-              <a @click="configData('VW1146',2)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1146',2);pageInfo.page4Btn=2"
+                class="open"
+                :class="{active:pageInfo.page4Btn===2}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span>频率3</span>
-              <a @click="configData('VW1146',4)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1146',4);pageInfo.page4Btn=3"
+                class="open"
+                :class="{active:pageInfo.page4Btn===3}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span class="special">频率0</span>
-              <a @click="configData('VW1146',0)" class="close" href="javascript:void(0)">停止</a>
+              <a @click="stopAll" class="close" href="javascript:void(0)">停止</a>
             </p>
           </div>
           <div class="info-box">
@@ -831,19 +890,34 @@
             </div>
             <p class="btn-box">
               <span>频率1</span>
-              <a @click="configData('VW1148',1)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1148',1);pageInfo.page5Btn=1"
+                class="open"
+                :class="{active:pageInfo.page5Btn===1}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span>频率2</span>
-              <a @click="configData('VW1148',2)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1148',2);pageInfo.page5Btn=2"
+                class="open"
+                :class="{active:pageInfo.page5Btn===2}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span>频率3</span>
-              <a @click="configData('VW1148',4)" class="open" href="javascript:void(0)">启动</a>
+              <a
+                @click="configData('VW1148',4);pageInfo.page5Btn=3"
+                class="open"
+                :class="{active:pageInfo.page5Btn===3}"
+                href="javascript:void(0)"
+              >启动</a>
             </p>
             <p class="btn-box">
               <span class="special">频率0</span>
-              <a @click="configData('VW1148',0)" class="close" href="javascript:void(0)">停止</a>
+              <a @click="stopAll" class="close" href="javascript:void(0)">停止</a>
             </p>
           </div>
           <div class="info-box">
@@ -908,7 +982,7 @@
               <p>实际流量</p>
               <strong>
                 <i>{{swtchInfo.waterPipe1Flow}}</i>
-                <span>KPa</span>
+                <span>M3/H</span>
               </strong>
             </div>
           </div>
@@ -1213,9 +1287,30 @@ export default {
         waterPipe2Flow: "",
         regulatingValve: "",
       },
+      pageInfo: {
+        page1Btn: 0,
+        page2Btn: 0,
+        page3Btn: 0,
+        page4Btn: 0,
+        page5Btn: 0,
+      },
     };
   },
   methods: {
+    stopAll() {
+      this.showerClose();
+      this.configData("VW1142", 0);
+      this.configData("VW1144", 0);
+      this.configData("VW1146", 0);
+      this.configData("VW1148", 0);
+      this.pageInfo = {
+        page1Btn: 0,
+        page2Btn: 0,
+        page3Btn: 0,
+        page4Btn: 0,
+        page5Btn: 0,
+      };
+    },
     goIndexPage() {
       this.dialogTableVisible = true;
     },
@@ -1226,6 +1321,12 @@ export default {
           this.dialogTableVisible = false;
           this.pageStep = 0;
           this.addTimeoutTken();
+          if (!this.apiToken) {
+            this.checkIsVidwOpened();
+            this.apiToken = setInterval(() => {
+              this.checkIsVidwOpened();
+            }, 5000);
+          }
         } else {
           this.$message({
             message: "密码错误，请重新输入！",
@@ -1263,8 +1364,12 @@ export default {
       }
       this.timeoutToken = setTimeout(() => {
         console.log("回到屏保");
-        this.loginInfo.status = 1;
-      }, 180000);
+        this.pageStep = -1;
+        if (this.apiToken) {
+          window.clearInterval(this.apiToken);
+          this.apiToken = "";
+        }
+      }, 300000);
       console.log("开启新的定时器");
     },
     viewOpen() {
@@ -1305,35 +1410,35 @@ export default {
 
           // 水泵1
           that.swtchInfo.waterTank1A =
-            Number(response.data["VW1062"]).toFixed(2) + "A";
+            Number(response.data["VW1062"]).toFixed(2) + "";
           that.swtchInfo.waterTank1P =
-            Number(response.data["VW1064"]).toFixed(2) + "KW";
+            Number(response.data["VW1064"]).toFixed(2) + "";
           that.swtchInfo.waterTank1F =
-            Number(response.data["VW1060"]).toFixed(2) + "Hz";
+            Number(response.data["VW1060"]).toFixed(2) + "";
           that.swtchInfo.waterTank1Status =
             response.data["VW1072"] === "1" ? "运行" : "停机";
           // 水泵2
           that.swtchInfo.waterTank2A =
-            Number(response.data["VW1068"]).toFixed(2) + "A";
+            Number(response.data["VW1068"]).toFixed(2) + "";
           that.swtchInfo.waterTank2P =
-            Number(response.data["VW1070"]).toFixed(2) + "KW";
+            Number(response.data["VW1070"]).toFixed(2) + "";
           that.swtchInfo.waterTank2F =
-            Number(response.data["VW1066"]).toFixed(2) + "Hz";
+            Number(response.data["VW1066"]).toFixed(2) + "";
           that.swtchInfo.waterTank2Status =
             response.data["VW1074"] === "1" ? "运行" : "停机";
 
           // 水管1
           that.swtchInfo.waterPipe1HighWaterPressure =
-            Number(response.data["VD1008"]).toFixed(2) + "KPa";
+            Number(response.data["VD1008"]).toFixed(2) + "";
           that.swtchInfo.waterPipe1LowWaterPressure =
-            Number(response.data["VD1012"]).toFixed(2) + "KPa";
+            Number(response.data["VD1012"]).toFixed(2) + "";
           that.swtchInfo.waterPipe1Flow =
-            Number(response.data["VD1016"]).toFixed(2) + "M3/H";
+            Number(response.data["VD1016"]).toFixed(2) + "";
           // 水管2
           that.swtchInfo.waterPipe2Pressure =
-            Number(response.data["VD1028"]).toFixed(2) + "KPa";
+            Number(response.data["VD1028"]).toFixed(2) + "";
           that.swtchInfo.waterPipe2Flow =
-            Number(response.data["VD1024"]).toFixed(2) + "M3/H";
+            Number(response.data["VD1024"]).toFixed(2) + "";
 
           // 选择开关
           that.swtchInfo.device = Number(response.data["V1004.1"]);
@@ -1466,8 +1571,10 @@ export default {
     },
     showerOpen() {
       let that = this;
+      this.showerOpen;
       httpService.showerOpen(function (response) {});
       this.addTimeoutTken();
+      this.pageInfo.page1Btn = 1;
     },
     showerClose() {
       httpService.showerClose(function (response) {});
@@ -1535,11 +1642,11 @@ export default {
   computed: {},
   created: function () {
     let that = this;
-    this.checkIsVidwOpened();
     this.nowTimes();
-    let apiToken = setInterval(() => {
-      this.checkIsVidwOpened();
-    }, 5000);
+    // this.checkIsVidwOpened();
+    // let apiToken = setInterval(() => {
+    //   this.checkIsVidwOpened();
+    // }, 5000);
   },
   mounted: function () {
     let that = this;
