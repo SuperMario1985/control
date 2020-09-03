@@ -1578,10 +1578,17 @@ export default {
     },
     showerOpen() {
       let that = this;
-      this.showerOpen;
-      httpService.showerOpen(function (response) {});
-      this.addTimeoutTken();
-      this.pageInfo.page1Btn = 1;
+      if (
+        this.pageInfo.page1Btn !== 0 &&
+        this.pageInfo.page2Btn !== 0 &&
+        this.pageInfo.page3Btn !== 0 &&
+        this.pageInfo.page4Btn !== 0 &&
+        this.pageInfo.page5Btn !== 0
+      ) {
+        httpService.showerOpen(function (response) {});
+        this.addTimeoutTken();
+        this.pageInfo.page1Btn = 1;
+      }
     },
     showerClose() {
       httpService.showerClose(function (response) {});
