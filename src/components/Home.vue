@@ -577,7 +577,7 @@
               <div>
                 <img src="../assets/images/step2/rain01.png" alt />
                 <i
-                  @click="configData('VW1142',1);pageInfo.page2Btn=1"
+                  @click="startRain(1,1)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===1}"
                 >降雨</i>
@@ -586,7 +586,7 @@
               <div>
                 <img src="../assets/images/step2/rain03.png" alt />
                 <i
-                  @click="configData('VW1142',2);pageInfo.page2Btn=2"
+                  @click="startRain(2,2)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===2}"
                 >降雨</i>
@@ -595,7 +595,7 @@
               <div>
                 <img src="../assets/images/step2/rain05.png" alt />
                 <i
-                  @click="configData('VW1142',4);pageInfo.page2Btn=3"
+                  @click="startRain(4,3)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===3}"
                 >降雨</i>
@@ -606,7 +606,7 @@
               <div>
                 <img src="../assets/images/step2/rain02.png" alt />
                 <i
-                  @click="configData('VW1142',8);pageInfo.page2Btn=4"
+                  @click="startRain(8,4)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===4}"
                 >降雨</i>
@@ -615,7 +615,7 @@
               <div>
                 <img src="../assets/images/step2/rain04.png" alt />
                 <i
-                  @click="configData('VW1142',16);pageInfo.page2Btn=5"
+                  @click="startRain(16,5)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===5}"
                 >降雨</i>
@@ -624,7 +624,7 @@
               <div>
                 <img src="../assets/images/step2/rain06.png" alt />
                 <i
-                  @click="configData('VW1142',32);pageInfo.page2Btn=6"
+                  @click="startRain(32,6)"
                   class="start-button"
                   :class="{active:pageInfo.page2Btn===6}"
                 >降雨</i>
@@ -714,7 +714,7 @@
               <p>
                 <span>频率1</span>
                 <a
-                  @click="configData('VW1144',1);pageInfo.page3Btn=1"
+                  @click="startDrainage(1,1)"
                   class="open"
                   :class="{active:pageInfo.page3Btn===1}"
                   href="javascript:void(0)"
@@ -723,7 +723,7 @@
               <p>
                 <span>频率2</span>
                 <a
-                  @click="configData('VW1144',2);pageInfo.page3Btn=2"
+                  @click="startDrainage(2,2)"
                   class="open"
                   :class="{active:pageInfo.page3Btn===2}"
                   href="javascript:void(0)"
@@ -732,7 +732,7 @@
               <p>
                 <span>频率3</span>
                 <a
-                  @click="configData('VW1144',4);pageInfo.page3Btn=3"
+                  @click="startDrainage(4,3)"
                   class="open"
                   :class="{active:pageInfo.page3Btn===3}"
                   href="javascript:void(0)"
@@ -741,7 +741,7 @@
               <p>
                 <span>频率4</span>
                 <a
-                  @click="configData('VW1144',8);pageInfo.page3Btn=4"
+                  @click="startDrainage(8,4)"
                   class="open"
                   :class="{active:pageInfo.page3Btn===4}"
                   href="javascript:void(0)"
@@ -750,7 +750,7 @@
               <p>
                 <span>频率5</span>
                 <a
-                  @click="configData('VW1144',16);pageInfo.page3Btn=5"
+                  @click="startDrainage(16,5)"
                   class="open"
                   :class="{active:pageInfo.page3Btn===5}"
                   href="javascript:void(0)"
@@ -817,7 +817,7 @@
             <p class="btn-box">
               <span>频率1</span>
               <a
-                @click="configData('VW1146',1);pageInfo.page4Btn=1"
+                @click="startSameFloor(1,1)"
                 class="open"
                 :class="{active:pageInfo.page4Btn===1}"
                 href="javascript:void(0)"
@@ -826,7 +826,7 @@
             <p class="btn-box">
               <span>频率2</span>
               <a
-                @click="configData('VW1146',2);pageInfo.page4Btn=2"
+                @click="startSameFloor(2,2)"
                 class="open"
                 :class="{active:pageInfo.page4Btn===2}"
                 href="javascript:void(0)"
@@ -835,7 +835,7 @@
             <p class="btn-box">
               <span>频率3</span>
               <a
-                @click="configData('VW1146',4);pageInfo.page4Btn=3"
+                @click="startSameFloor(4,3)"
                 class="open"
                 :class="{active:pageInfo.page4Btn===3}"
                 href="javascript:void(0)"
@@ -898,7 +898,7 @@
             <p class="btn-box">
               <span>频率1</span>
               <a
-                @click="configData('VW1148',1);pageInfo.page5Btn=1"
+                @click="startInsideFloor(1,1)"
                 class="open"
                 :class="{active:pageInfo.page5Btn===1}"
                 href="javascript:void(0)"
@@ -907,7 +907,7 @@
             <p class="btn-box">
               <span>频率2</span>
               <a
-                @click="configData('VW1148',2);pageInfo.page5Btn=2"
+                @click="startInsideFloor(2,2)"
                 class="open"
                 :class="{active:pageInfo.page5Btn===2}"
                 href="javascript:void(0)"
@@ -916,7 +916,7 @@
             <p class="btn-box">
               <span>频率3</span>
               <a
-                @click="configData('VW1148',4);pageInfo.page5Btn=3"
+                @click="startInsideFloor(4,3)"
                 class="open"
                 :class="{active:pageInfo.page5Btn===3}"
                 href="javascript:void(0)"
@@ -1576,18 +1576,67 @@ export default {
       httpService.waterloggingControlClose(function (response) {});
       this.addTimeoutTken();
     },
+    // 开启演示
     showerOpen() {
       let that = this;
       if (
-        this.pageInfo.page1Btn !== 0 &&
-        this.pageInfo.page2Btn !== 0 &&
-        this.pageInfo.page3Btn !== 0 &&
-        this.pageInfo.page4Btn !== 0 &&
-        this.pageInfo.page5Btn !== 0
+        this.pageInfo.page2Btn === 0 &&
+        this.pageInfo.page3Btn === 0 &&
+        this.pageInfo.page4Btn === 0 &&
+        this.pageInfo.page5Btn === 0
       ) {
         httpService.showerOpen(function (response) {});
         this.addTimeoutTken();
         this.pageInfo.page1Btn = 1;
+      }
+    },
+    // 开启降雨
+    startRain(num1, num2) {
+      let that = this;
+      if (
+        this.pageInfo.page1Btn === 0 &&
+        this.pageInfo.page3Btn === 0 &&
+        this.pageInfo.page4Btn === 0 &&
+        this.pageInfo.page5Btn === 0
+      ) {
+        this.configData("VW1142", num1);
+        this.pageInfo.page2Btn = num2;
+      }
+    },
+    // 开始虹吸
+    startDrainage(num1, num2){
+      if (
+        this.pageInfo.page1Btn === 0 &&
+        this.pageInfo.page2Btn === 0 &&
+        this.pageInfo.page4Btn === 0 &&
+        this.pageInfo.page5Btn === 0
+      ) {
+        this.configData("VW1144", num1);
+        this.pageInfo.page3Btn = num2;
+      }
+    },
+    // 开始同层排水
+    startSameFloor(num1, num2){
+      if (
+        this.pageInfo.page1Btn === 0 &&
+        this.pageInfo.page2Btn === 0 &&
+        this.pageInfo.page3Btn === 0 &&
+        this.pageInfo.page5Btn === 0
+      ) {
+        this.configData("VW1146", num1);
+        this.pageInfo.page4Btn = num2;
+      }
+    },
+    // 开始
+    startInsideFloor(num1, num2){
+      if (
+        this.pageInfo.page1Btn === 0 &&
+        this.pageInfo.page2Btn === 0 &&
+        this.pageInfo.page3Btn === 0 &&
+        this.pageInfo.page4Btn === 0
+      ) {
+        this.configData("VW1148", num1);
+        this.pageInfo.page5Btn = num2;
       }
     },
     showerClose() {
